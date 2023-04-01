@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: unset;
 }
 
 body {
@@ -30,7 +31,7 @@ body {
   background-color: var(--button-text);
 }
 
-main{
+main {
   margin: 80px 0;
 }
 
@@ -39,7 +40,7 @@ main{
 }
 .primary-button {
   background-color: var(--button);
-  border: 0;
+  border: 1px solid var(--button);
   outline: 0;
   color: var(--button-text);
   font-family: var(--poppins);
@@ -49,7 +50,14 @@ main{
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: all ease-out 0.4s;
 }
+
+.primary-button:hover {
+  background-color: var(--background) !important;
+  border: 1px solid var(--button-text);
+}
+
 .primary-button-text {
   color: var(--button-text);
   font-family: var(--poppins);
@@ -73,4 +81,9 @@ main{
   color: var(--paragraph);
   letter-spacing: 2px;
   line-height: 2;
+}
+
+/*React Carousel*/
+.carousel .slide {
+  text-align: unset !important;
 }

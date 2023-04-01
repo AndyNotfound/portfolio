@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
-import downloadCv from "@/helpers/downloadcv";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import downloadCv from "@/helpers/download-cv";
+import ProductCarousel from "@/components/carousels";
 
 export default function Home() {
   const router = useRouter();
@@ -47,7 +48,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="projects" className={`wrapper ${styles.projects}`}>
+        <section id="projects" className={`${styles.projects}`}>
           <div className={styles.projectsHeader}>
             <h2 className="tittle-header">Recent Projects</h2>
             <button
@@ -57,8 +58,8 @@ export default function Home() {
               View All
             </button>
           </div>
-          <div>
-            <p className="paragraph">Something like a projects here.</p>
+          <div className={styles.projectsList}>
+            <ProductCarousel />
           </div>
         </section>
       </main>

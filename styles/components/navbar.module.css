@@ -52,6 +52,7 @@
   font-size: 32px;
   font-weight: 500;
   color: var(--headline);
+  transition: all ease-out 0.4s;
 }
 .navbarLink:hover {
   color: var(--button);

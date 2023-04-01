@@ -1,0 +1,99 @@
+.carousel,
+.carouselDetail,
+.carouselButtonGroup,
+.carouselButton {
+  display: flex;
+  text-decoration: none;
+}
+.carouselContainer {
+  margin: 0 15%;
+}
+.carousel {
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+.carouselDetail {
+  justify-content: space-between;
+  gap: 60px;
+}
+.carouselDetail > h2 {
+  font-family: var(--oxanium);
+  width: 40%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 62px;
+  color: var(--headline);
+}
+.carouselDesc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.carouselButtonGroup {
+  gap: 50px;
+}
+.carouselButton {
+  gap: 10px;
+  vertical-align: middle;
+  align-items: center;
+}
+.buttonText {
+  color: var(--button-text);
+  text-transform: capitalize;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+}
+.carouselThumbnailHolder {
+  width: 100%;
+  height: 750px;
+  position: relative;
+}
+.carouselThumbnailHolder > img {
+  object-fit: cover;
+  background-position: center;
+}
+
+.buttonHide {
+  display: none;
+}
+.buttonShow {
+  display: block;
+}
+.carouselButtonX {
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+  border: none;
+  background-color: unset;
+}
+
+@keyframes moving-arrow {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px);
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px);
+  }
+}
+
+.carouselButtonLeft,
+.carouselButtonRight {
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+  animation: moving-arrow 0.5s infinite alternate;
+}
+
+.carouselButtonLeft {
+  left: -60px;
+}
+
+.carouselButtonRight {
+  right: -60px;
+}
+.carouselContainer {
+  position: relative;
+}

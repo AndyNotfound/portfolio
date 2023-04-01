@@ -25,10 +25,10 @@ export default function Navbar() {
           <Link className={styles.navbarLink} href="/">
             Home
           </Link>
-          <Link className={styles.navbarLink} href="/projects">
+          <Link className={styles.navbarLink} href="/projects" prefetch>
             Projects
           </Link>
-          <Link className={styles.navbarLink} href="/about">
+          <Link className={styles.navbarLink} href="/about" as="creative-developer" prefetch>
             About
           </Link>
         </div>

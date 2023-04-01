@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/components/footer.module.css"
-import downloadCv from "@/helpers/downloadcv";
+import downloadCv from "@/helpers/download-cv";
 
 export default function Footer() {
   return (

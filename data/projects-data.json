@@ -1,0 +1,23 @@
+[
+    {
+        "thumbnail" : "",
+        "name": "Easy Bank Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": "https://andynotfound.github.io/EasyBankLandingPage/",
+        "repoUrl": "https://github.com/AndyNotfound/EasyBankLandingPage"
+    },
+    {
+        "thumbnail" : "",
+        "name": "LoopStudios Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": "https://andynotfound.github.io/LoopstudiosLandingPage/",
+        "repoUrl": "https://github.com/AndyNotfound/LoopstudiosLandingPage"
+    },
+    {
+        "thumbnail" : "",
+        "name": "Real Estate Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": "https://real-estate-landing-page-react.vercel.app/",
+        "repoUrl": "https://github.com/AndyNotfound/realEstateLandingPage"
+    }
+]
