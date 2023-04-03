@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600&family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap");
-
 :root {
   --background: #fffffe;
   --button: #00ebc7;
@@ -10,77 +9,92 @@
   --playfair: "Playfair Display", serif;
   --poppins: "Poppins", sans-serif;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-align: unset;
 }
-
 body {
   background-color: var(--background);
 }
-
 ::-webkit-scrollbar {
   width: 5px;
   background-color: var(--button);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--button-text);
 }
-
-main {
-  margin: 80px 0;
-}
-
 .wrapper {
-  width: 70%;
+  width: 90%;
 }
 .primary-button {
   background-color: var(--button);
   border: 1px solid var(--button);
   outline: 0;
-  color: var(--button-text);
-  font-family: var(--poppins);
-  font-size: 20px;
-  font-weight: 500;
-  padding: 16px 60px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  padding: 15px 42px;
   cursor: pointer;
   transition: all ease-out 0.4s;
+  color: var(--button-text);
+  font-family: var(--poppins);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-
 .primary-button:hover {
   background-color: var(--background) !important;
   border: 1px solid var(--button-text);
 }
-
-.primary-button-text {
-  color: var(--button-text);
-  font-family: var(--poppins);
-  font-size: 20px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
 .tittle-header {
   font-family: var(--oxanium);
+  font-style: normal;
   font-weight: 600;
-  font-size: 50px;
-  color: var(--headline);
+  font-size: 24px;
+  line-height: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  color: var(--headline);
 }
-
 .paragraph {
   font-family: var(--poppins);
-  font-weight: 400;
   color: var(--paragraph);
-  letter-spacing: 2px;
-  line-height: 2;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    margin: 80px 0;
+  }
+  .wrapper {
+    width: 70%;
+  }
+  .primary-button {
+    font-size: 20px;
+    padding: 16px 60px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+  }
+  .tittle-header {
+    font-size: 50px;
+    line-height: 80px;
+    letter-spacing: 0.08em;
+  }
+  .paragraph {
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 2;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 0.05em;
+  }
 }
 
 /*React Carousel*/

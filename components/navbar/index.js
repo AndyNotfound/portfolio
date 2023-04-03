@@ -6,7 +6,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className={styles.navbar}>
-      <p className={styles.navbarLogo}>A.</p>
+      <Link href="/" className={styles.navbarLogo}>A.</Link>
       <button
         className={styles.navbarMenuButton}
         onClick={() => {

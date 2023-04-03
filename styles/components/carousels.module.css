@@ -1,3 +1,11 @@
+@keyframes moving-arrow {
+  0% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px);
+  }
+  100% {
+    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px);
+  }
+}
 .carousel,
 .carouselDetail,
 .carouselButtonGroup,
@@ -6,56 +14,58 @@
   text-decoration: none;
 }
 .carouselContainer {
-  margin: 0 15%;
+  margin: 0 5%;
 }
 .carousel {
   flex-direction: column;
-  gap: 60px;
+  gap: 20px;
   position: relative;
 }
 .carouselDetail {
-  justify-content: space-between;
-  gap: 60px;
+  flex-direction: column;
+  gap: 15px;
 }
 .carouselDetail > h2 {
+  width: 100%;
   font-family: var(--oxanium);
-  width: 40%;
   font-style: normal;
   font-weight: 500;
-  font-size: 50px;
-  line-height: 62px;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.08em;
   color: var(--headline);
 }
 .carouselDesc {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .carouselButtonGroup {
-  gap: 50px;
+  gap: 20px;
 }
 .carouselButton {
-  gap: 10px;
-  vertical-align: middle;
-  align-items: center;
+  gap: 12px;
+}
+.buttonIcon {
+  width: auto;
+  height: 18px;
 }
 .buttonText {
   color: var(--button-text);
   text-transform: capitalize;
-  line-height: 30px;
+  line-height: 18px;
   letter-spacing: 0.01em;
 }
 .carouselThumbnailHolder {
   width: 100%;
-  height: 750px;
+  height: 194px;
   position: relative;
 }
 .carouselThumbnailHolder > img {
   object-fit: cover;
   background-position: center;
 }
-
 .buttonHide {
   display: none;
 }
@@ -69,16 +79,10 @@
   border: none;
   background-color: unset;
 }
-
-@keyframes moving-arrow {
-  0% {
-    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px);
-  }
-  100% {
-    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px);
-  }
+.carouselButtonX > img {
+  width: 14px;
+  height: 22px;
 }
-
 .carouselButtonLeft,
 .carouselButtonRight {
   position: absolute;
@@ -86,14 +90,62 @@
   z-index: 3;
   animation: moving-arrow 0.5s infinite alternate;
 }
-
 .carouselButtonLeft {
-  left: -60px;
+  left: 0;
 }
-
 .carouselButtonRight {
-  right: -60px;
+  right: 25px;
 }
 .carouselContainer {
   position: relative;
+}
+@media screen and (min-width: 1000px) {
+  .carouselContainer {
+    margin: 0 15%;
+  }
+  .carousel {
+    gap: 60px;
+  }
+  .carouselDetail {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  .carouselDetail > h2 {
+    width: 40%;
+    font-size: 50px;
+    line-height: 62px;
+    letter-spacing: 0.08em;
+  }
+  .carouselDesc {
+    width: 50%;
+    gap: 30px;
+  }
+  .carouselButtonGroup {
+    gap: 50px;
+  }
+  .carouselButton {
+    gap: 10px;
+  }
+  .buttonIcon {
+    width: auto;
+    height: 22px;
+  }
+  .buttonText {
+    line-height: 30px;
+    letter-spacing: 0.01em;
+  }
+  .carouselThumbnailHolder {
+    height: 1022px;
+  }
+  .carouselButtonX > img {
+    width: 26px;
+    height: 40px;
+  }
+  .carouselButtonLeft{
+    left: -60px;
+  }
+  .carouselButtonRight{
+    right: -35px;
+  }
 }

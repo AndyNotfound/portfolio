@@ -79,7 +79,7 @@ export default function ProductCarousel() {
                         alt=""
                       />
                       <p className={`paragraph ${styles.buttonText}`}>
-                        ViewStudyCase
+                        View&nbsp;Study&nbsp;Case
                       </p>
                     </Link>
                     <Link href={item.liveUrl} className={styles.carouselButton}>
@@ -91,7 +91,7 @@ export default function ProductCarousel() {
                         alt=""
                       />
                       <p className={`paragraph ${styles.buttonText}`}>
-                        LivePreview
+                        Live&nbsp;Preview
                       </p>
                     </Link>
                   </div>

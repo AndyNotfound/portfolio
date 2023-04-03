@@ -1,75 +1,152 @@
 /*Hero Section | #hero*/
 .hero {
+  display: flex;
+  flex-direction: column-reverse;
   position: relative;
-  margin: 200px auto 0;
+  margin: 140px auto 0;
 }
 .heroContent {
-  /*TODO: Get rid of this height if possible*/
-  height: 566px;
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* border: black 1px solid; */
+  position: absolute;
+  bottom: -85px;
 }
 .heroSecondHeadline {
-  color: var(--headline);
-  font-family: var(--oxanium);
-  font-weight: 500;
-  font-size: 24px;
-  letter-spacing: 1px;
+  display: none;
 }
 .heroHeadline {
   color: var(--headline);
   font-family: var(--oxanium);
-  font-size: 64px;
+  font-style: normal;
   font-weight: 600;
-  letter-spacing: 6px;
-  margin: 30px 0 70px 0;
+  letter-spacing: 0.08em;
+  margin: 0 0 10px 0;
   text-transform: uppercase;
+  font-size: 32px;
+  line-height: 40px;
 }
 .heroImage {
-  position: absolute;
-  top: 0;
-  right: 0;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1000px) {
+  .hero {
+    margin: 200px auto 0;
+  }
+  .heroContent {
+    bottom: 0;
+  }
+  .heroImage {
+    width: 566px;
+    height: 566px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .heroContent {
+    height: 566px;
+    position: relative;
+    z-index: 1;
+  }
+  .heroSecondHeadline {
+    display: unset;
+    color: var(--headline);
+    font-family: var(--oxanium);
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  .heroHeadline {
+    font-size: 64px;
+    margin: 30px 0 70px 0;
+    line-height: 80px;
+    letter-spacing: 0.08em;
+  }
 }
 
 /*About Me Section | #about*/
 .about {
-  margin: 200px 0 0;
+  margin: calc(130px + 85px) 0 0;
   width: 100%;
-  padding-left: 15%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   position: relative;
+  gap: 20px;
 }
 .aboutHeader {
-  /*TODO: Figure out how to move it to wrapper position*/
-  rotate: -90deg;
+  padding-left: 5%;
+}
+.aboutImage {
+  width: 100%;
+  height: 455px;
+  background-position: center;
+  background-size: cover;
 }
 .aboutImageContainer {
+  width: 100%;
   align-self: flex-end;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .aboutDetails {
+  width: 297px;
   position: absolute;
-  bottom: 169px;
-  left: 169px;
-  padding: 45px 60px;
   background-color: var(--background);
-  width: 584px;
+  bottom: 60px;
+  padding: 10px 20px;
+}
+@media screen and (min-width: 1000px) {
+  .about {
+    margin: 200px 0 0;
+    padding-left: 15%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .aboutHeader {
+    /*TODO: Figure out how to move it to wrapper position*/
+    rotate: -90deg;
+  }
+  .aboutImageContainer {
+    width: fit-content;
+  }
+  .aboutImage {
+    height: 783px;
+  }
+  .aboutDetails {
+    width: 584px;
+    bottom: 169px;
+    left: 169px;
+    padding: 45px 60px;
+  }
 }
 
 /*Recent Projects Section | #projects*/
 .projects {
-  margin: 200px auto 0;
+  margin: 130px auto 0;
 }
-.projectsHeader {
-  margin: 0 15% 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.projectsHeader{
+  margin: 0 5% 35px;
+}
+.projectsHeader > button {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .projects {
+    margin: 200px auto 0;
+  }
+  .projectsHeader {
+    margin: 0 15% 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projectsHeader > button {
+    display: block;
+  }
 }
