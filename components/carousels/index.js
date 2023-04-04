@@ -3,6 +3,7 @@ import styles from "@/styles/components/carousels.module.css";
 import { Carousel } from "react-responsive-carousel";
 import fetchData from "@/helpers/fetch-data";
 import { useState, useEffect } from "react";
+import { Router, useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,6 +34,8 @@ export default function ProductCarousel() {
     }
   }
 
+  const router = useRouter();
+
   return (
     <div className={styles.carouselContainer}>
       <button
@@ -41,7 +44,7 @@ export default function ProductCarousel() {
         } ${styles.carouselButtonX} ${styles.carouselButtonLeft}`}
         onClick={prevSlide}
       >
-        <Image src="/chevron-left-solid.svg" width={26} height={40} alt="" />
+        <Image src="/assets/chevron-left-solid.svg" width={26} height={40} alt="" />
       </button>
       <Carousel
         selectedItem={currentSlide}
@@ -60,7 +63,7 @@ export default function ProductCarousel() {
               <div className={styles.carouselThumbnailHolder}>
                 <Image
                   className={styles.carouselThumbnail}
-                  src="/easy-bank.webp"
+                  src={`/projects/${item.thumbnail}.webp`}
                   fill
                   alt=""
                 />
@@ -70,30 +73,38 @@ export default function ProductCarousel() {
                 <div className={styles.carouselDesc}>
                   <p className="paragraph">{item.description}</p>
                   <div className={styles.carouselButtonGroup}>
-                    <Link href={item.repoUrl} className={styles.carouselButton}>
+                    <button
+                      className={`paragraph ${styles.buttonText} ${styles.carouselButton}`}
+                      onClick={() => router.push(`/projects/${item.id}`)}
+                    >
                       <Image
                         className={styles.buttonIcon}
-                        src="/paste.svg"
+                        src="/assets/paste.svg"
                         width={22}
                         height={22}
                         alt=""
                       />
-                      <p className={`paragraph ${styles.buttonText}`}>
-                        View&nbsp;Study&nbsp;Case
-                      </p>
-                    </Link>
-                    <Link href={item.liveUrl} className={styles.carouselButton}>
-                      <Image
-                        className={styles.buttonIcon}
-                        src="/link.svg"
-                        width={28}
-                        height={22}
-                        alt=""
-                      />
-                      <p className={`paragraph ${styles.buttonText}`}>
-                        Live&nbsp;Preview
-                      </p>
-                    </Link>
+                      View&nbsp;Study&nbsp;Case
+                    </button>
+                    {item.liveUrl !== "" && item.liveUrl !== null ? (
+                      <Link
+                        href={item.liveUrl}
+                        className={styles.carouselButton}
+                      >
+                        <Image
+                          className={styles.buttonIcon}
+                          src="/assets/link.svg"
+                          width={28}
+                          height={22}
+                          alt=""
+                        />
+                        <p className={`paragraph ${styles.buttonText}`}>
+                          Live&nbsp;Preview
+                        </p>
+                      </Link>
+                    ) : (
+                      <div> </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -109,7 +120,7 @@ export default function ProductCarousel() {
         } ${styles.carouselButtonX} ${styles.carouselButtonRight}`}
         onClick={nextSlide}
       >
-        <Image src="/chevron-right-solid.svg" width={26} height={40} alt="" />
+        <Image src="/assets/chevron-right-solid.svg" width={26} height={40} alt="" />
       </button>
     </div>
   );

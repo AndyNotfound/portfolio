@@ -31,6 +31,13 @@
   width: 100%;
   height: auto;
 }
+@media screen and (min-width: 700px) {
+  .heroHeadline {
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: 0.08em;
+  }
+}
 @media screen and (min-width: 1000px) {
   .hero {
     margin: 200px auto 0;
@@ -99,26 +106,49 @@
   bottom: 60px;
   padding: 10px 20px;
 }
+@media screen and (min-width: 700px) {
+  .aboutDetails {
+    width: fit-content;
+    max-width: 584px;
+    bottom: 60px;
+    padding: 45px 60px;
+  }
+}
 @media screen and (min-width: 1000px) {
-  .about {
-    margin: 200px 0 0;
+  .aboutHeader{
     padding-left: 15%;
+  }
+  .aboutImage{
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    position: relative;
+    margin: 200px 0 0;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
   .aboutHeader {
-    /*TODO: Figure out how to move it to wrapper position*/
     rotate: -90deg;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    text-align: center;
+    vertical-align: middle;
   }
   .aboutImageContainer {
-    width: fit-content;
+    width: 70%;
   }
   .aboutImage {
-    height: 783px;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
   }
   .aboutDetails {
-    width: 584px;
+    width: fit-content;
+    max-width: 584px;
     bottom: 169px;
     left: 169px;
     padding: 45px 60px;

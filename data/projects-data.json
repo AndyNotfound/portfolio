@@ -1,23 +1,58 @@
 [
     {
-        "thumbnail" : "",
+        "id": 1,
+        "thumbnail": "easy-bank",
         "name": "Easy Bank Landing Page",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
-        "liveUrl": "https://andynotfound.github.io/EasyBankLandingPage/",
-        "repoUrl": "https://github.com/AndyNotfound/EasyBankLandingPage"
+        "liveUrl": "https://andynotfound.github.io/EasyBankLandingPage/"
     },
     {
-        "thumbnail" : "",
+        "id": 2,
+        "thumbnail": "loop-studios",
         "name": "LoopStudios Landing Page",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
-        "liveUrl": "https://andynotfound.github.io/LoopstudiosLandingPage/",
-        "repoUrl": "https://github.com/AndyNotfound/LoopstudiosLandingPage"
+        "liveUrl": "https://andynotfound.github.io/LoopstudiosLandingPage/"
     },
     {
-        "thumbnail" : "",
+        "id": 3,
+        "thumbnail": "luxspace",
+        "name": "LuxSpace",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": "https://luxspace-andy.vercel.app/"
+    },
+    {
+        "id": 4,
+        "thumbnail": "property-agent",
         "name": "Real Estate Landing Page",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
-        "liveUrl": "https://real-estate-landing-page-react.vercel.app/",
-        "repoUrl": "https://github.com/AndyNotfound/realEstateLandingPage"
+        "liveUrl": "https://real-estate-landing-page-react.vercel.app/"
+    },
+    {
+        "id": 5,
+        "thumbnail": "room-homepage",
+        "name": "Real Estate Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": "https://real-estate-landing-page-react.vercel.app/"
+    },
+    {
+        "id": 6,
+        "thumbnail": "rest0rant",
+        "name": "Real Estate Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": ""
+    },
+    {
+        "id": 7,
+        "thumbnail": "movie",
+        "name": "Real Estate Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": ""
+    },
+    {
+        "id": 8,
+        "thumbnail": "dekoor",
+        "name": "Real Estate Landing Page",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore consequat.",
+        "liveUrl": "https://dekoor-andynotfound.vercel.app/"
     }
 ]

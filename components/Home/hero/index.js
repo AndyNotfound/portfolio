@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/components/Home.module.css";
 import downloadCv from "@/helpers/download-cv";
 
 export default function Hero() {
@@ -16,10 +16,11 @@ export default function Hero() {
       </div>
       <Image
         className={styles.heroImage}
-        src="/hero-Illustration.webp"
+        src="/assets/hero-Illustration.webp"
         width={566}
         height={566}
         alt=""
+        priority
       />
     </section>
   );

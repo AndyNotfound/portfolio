@@ -1,5 +1,6 @@
 .footer {
   margin: 130px 0 0;
+  position: relative;
 }
 .cta {
   display: flex;
@@ -15,10 +16,11 @@
   line-height: 40px;
   letter-spacing: 0.08em;
 }
-.footerImage {
-  inset: unset !important;
-  z-index: -1 !important;
-  overflow: hidden;
+.footerImage{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 .footerLinks {
   display: grid;
@@ -49,6 +51,11 @@
 .linkTarget {
   text-decoration: none;
   text-transform: capitalize;
+}
+@media screen and (min-width: 700px) {
+  .footerLinks{
+    padding: 50px 10%;
+  }
 }
 @media screen and (min-width: 1000px) {
   .footer {

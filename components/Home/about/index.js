@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/components/Home.module.css";
 
 export default function AboutMe() {
   return (
@@ -8,7 +8,7 @@ export default function AboutMe() {
       <div className={styles.aboutImageContainer}>
         <Image
           className={styles.aboutImage}
-          src="/AboutMe-Illustration.webp"
+          src="/assets/AboutMe-Illustration.webp"
           width={1122}
           height={783}
           alt=""

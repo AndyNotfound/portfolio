@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import ProductCarousel from "@/components/Home/carousels";
-import styles from "@/styles/Home.module.css";
+import ProductCarousel from "@/components/carousels";
+import styles from "@/styles/components/Home.module.css";
 
 export default function RecentProjects() {
   const router = useRouter();
