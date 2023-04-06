@@ -1,15 +1,15 @@
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useRouter } from "next/router";
 
 export default function Project() {
   const router = useRouter();
-  const { id } = router.query;
+  const { slug } = router.query;
   return (
     <>
       <Navbar />
       <main>
-        <h1>{id}</h1>
+        <h1>{slug}</h1>
       </main>
       <Footer />
     </>

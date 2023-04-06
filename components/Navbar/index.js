@@ -1,4 +1,4 @@
-import styles from "@/styles/components/navbar.module.css";
+import styles from "@/styles/components/Navbar.module.css";
 import { useState } from "react";
 import Link from "next/link";
 

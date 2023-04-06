@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/components/Home.module.css";
-import downloadCv from "@/helpers/download-cv";
+import { downloadCv } from "@/helpers";
 
 export default function Hero() {
   return (

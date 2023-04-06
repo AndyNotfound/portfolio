@@ -1,31 +1,20 @@
-@keyframes moving-arrow {
-  0% {
-    transform: scale(var(--s, 1)) translate(12px, -6px) translate(4px);
-  }
-  100% {
-    transform: scale(var(--s, 1)) translate(12px, -6px) translate(-4px);
-  }
-}
-.carousel,
-.carouselDetail,
-.carouselButtonGroup,
-.carouselButton {
+.productCard,
+.productCardDetail,
+.productCardButtonGroup,
+.productCardButton {
   display: flex;
   text-decoration: none;
 }
-.carouselContainer {
-  margin: 0 5%;
-}
-.carousel {
+.productCard {
   flex-direction: column;
   gap: 20px;
   position: relative;
 }
-.carouselDetail {
+.productCardDetail {
   flex-direction: column;
   gap: 15px;
 }
-.carouselDetail > h2 {
+.productCardDetail > h2 {
   width: 100%;
   font-family: var(--oxanium);
   font-style: normal;
@@ -35,24 +24,24 @@
   letter-spacing: 0.08em;
   color: var(--headline);
 }
-.carouselDesc {
+.productCardDesc {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.carouselDesc > p {
+.productCardDesc > p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.carouselButtonGroup {
+.productCardButtonGroup {
   flex-wrap: wrap;
   gap: 20px;
 }
-.carouselButton {
+.productCardButton {
   gap: 12px;
   background-color: unset;
   border: unset;
@@ -70,76 +59,41 @@
   line-height: 18px;
   letter-spacing: 0.01em;
 }
-.carouselThumbnailHolder {
+.productCardThumbnailHolder {
   width: 100%;
   aspect-ratio: 1;
   max-height: 400px;
   position: relative;
 }
-.carouselThumbnailHolder > img {
+.productCardThumbnailHolder > img {
   object-fit: cover;
   background-position: center;
 }
-.buttonHide {
-  display: none;
-}
-.buttonShow {
-  display: block;
-}
-.carouselButtonX {
-  width: fit-content;
-  height: fit-content;
-  outline: none;
-  border: none;
-  background-color: unset;
-}
-.carouselButtonX > img {
-  width: 34px;
-  height: 34px;
-  aspect-ratio: 1;
-}
-.carouselButtonLeft,
-.carouselButtonRight {
-  position: absolute;
-  top: 40%;
-  z-index: 3;
-}
-.carouselButtonLeft {
-  left: -17px;
-}
-.carouselButtonRight {
-  right: -17px;
-}
-.carouselContainer {
-  position: relative;
-}
+
 @media screen and (min-width: 1000px) {
-  .carouselContainer {
-    margin: 0 15%;
-  }
-  .carousel {
+  .productCard {
     gap: 60px;
   }
-  .carouselDetail {
+  .productCardDetail {
     flex-direction: row;
     justify-content: space-between;
     row-gap: 60px;
   }
-  .carouselDetail > h2 {
+  .productCardDetail > h2 {
     width: 40%;
     font-size: 50px;
     line-height: 62px;
     letter-spacing: 0.08em;
   }
-  .carouselDesc {
+  .productCardDesc {
     width: 50%;
     gap: 50px;
   }
-  .carouselButtonGroup {
+  .productCardButtonGroup {
     row-gap: 20px;
     column-gap: 50px;
   }
-  .carouselButton {
+  .productCardButton {
     gap: 10px;
   }
   .buttonIcon {
@@ -150,18 +104,7 @@
     line-height: 30px;
     letter-spacing: 0.01em;
   }
-  .carouselThumbnailHolder {
+  .productCardThumbnailHolder {
     max-height: 700px;
-  }
-  .carouselButtonX > img {
-    width: 56px;
-    height: 56px;
-    aspect-ratio: 1;
-  }
-  .carouselButtonLeft {
-    left: -28px;
-  }
-  .carouselButtonRight {
-    right: -28px;
   }
 }

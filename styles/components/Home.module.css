@@ -115,10 +115,10 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  .aboutHeader{
+  .aboutHeader {
     padding-left: 15%;
   }
-  .aboutImage{
+  .aboutImage {
     height: 600px;
   }
 }
@@ -159,14 +159,51 @@
 .projects {
   margin: 130px auto 0;
 }
-.projectsHeader{
+.projectsHeader {
   margin: 0 5% 35px;
 }
 .projectsHeader > button {
   display: none;
 }
+.carouselContainer {
+  margin: 0 5%;
+  position: relative;
+}
+.carouselButtonX {
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+  border: none;
+  background-color: unset;
+}
+.carouselButtonX > img {
+  width: 34px;
+  height: 34px;
+  aspect-ratio: 1;
+}
+.carouselButtonLeft,
+.carouselButtonRight {
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+}
+.carouselButtonLeft {
+  left: -17px;
+}
+.carouselButtonRight {
+  right: -17px;
+}
+.buttonHide {
+  display: none;
+}
+.buttonShow {
+  display: block;
+}
 
 @media screen and (min-width: 1000px) {
+  .carouselContainer {
+    margin: 0 15%;
+  }
   .projects {
     margin: 200px auto 0;
   }
@@ -178,5 +215,16 @@
   }
   .projectsHeader > button {
     display: block;
+  }
+  .carouselButtonX > img {
+    width: 56px;
+    height: 56px;
+    aspect-ratio: 1;
+  }
+  .carouselButtonLeft {
+    left: -28px;
+  }
+  .carouselButtonRight {
+    right: -28px;
   }
 }
