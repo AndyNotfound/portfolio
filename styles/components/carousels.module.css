@@ -94,21 +94,21 @@
   background-color: unset;
 }
 .carouselButtonX > img {
-  width: 14px;
-  height: 22px;
+  width: 34px;
+  height: 34px;
+  aspect-ratio: 1;
 }
 .carouselButtonLeft,
 .carouselButtonRight {
   position: absolute;
   top: 40%;
   z-index: 3;
-  animation: moving-arrow 0.5s infinite alternate;
 }
 .carouselButtonLeft {
-  left: 0;
+  left: -17px;
 }
 .carouselButtonRight {
-  right: 25px;
+  right: -17px;
 }
 .carouselContainer {
   position: relative;
@@ -154,13 +154,14 @@
     max-height: 700px;
   }
   .carouselButtonX > img {
-    width: 26px;
-    height: 40px;
+    width: 56px;
+    height: 56px;
+    aspect-ratio: 1;
   }
   .carouselButtonLeft {
-    left: -60px;
+    left: -28px;
   }
   .carouselButtonRight {
-    right: -35px;
+    right: -28px;
   }
 }

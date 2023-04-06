@@ -44,7 +44,7 @@ export default function ProductCarousel() {
         } ${styles.carouselButtonX} ${styles.carouselButtonLeft}`}
         onClick={prevSlide}
       >
-        <Image src="/assets/chevron-left-solid.svg" width={26} height={40} alt="" />
+        <Image src="/assets/carousel-left.svg" width={56} height={56} alt="" />
       </button>
       <Carousel
         selectedItem={currentSlide}
@@ -120,7 +120,7 @@ export default function ProductCarousel() {
         } ${styles.carouselButtonX} ${styles.carouselButtonRight}`}
         onClick={nextSlide}
       >
-        <Image src="/assets/chevron-right-solid.svg" width={26} height={40} alt="" />
+        <Image src="/assets/carousel-right.svg" width={56} height={56} alt="" />
       </button>
     </div>
   );
