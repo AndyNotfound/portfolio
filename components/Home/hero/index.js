@@ -7,7 +7,7 @@ export default function Hero() {
     <section id="hero" className={`wrapper ${styles.hero}`}>
       <div className={styles.heroContent}>
         <p className={styles.heroSecondHeadline}>Gohand Silitonga</p>
-        <h1 className={styles.heroHeadline}>
+        <h1 className={`page-header ${styles.heroHeadline}`}>
           A creative developer from indonesia
         </h1>
         <button onClick={downloadCv} className="primary-button">

@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 export default function ProjectsCard({ data }) {
   const router = useRouter();
 
-  const {slug, frontmatter: {coverImage, shortTittle, excerpt, live}} = data;
+  const {slug, frontmatter: {coverImage, title, excerpt, live}} = data;
   return (
     <div className={styles.productCard}>
       <div className={styles.productCardThumbnailHolder}>
@@ -19,7 +19,7 @@ export default function ProjectsCard({ data }) {
         />
       </div>
       <div className={styles.productCardDetail}>
-        <h2>{shortTittle}</h2>
+        <h2>{title}</h2>
         <div className={styles.productCardDesc}>
           <p className="paragraph">{excerpt}</p>
           <div className={styles.productCardButtonGroup}>

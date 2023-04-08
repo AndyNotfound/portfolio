@@ -33,7 +33,9 @@ export default function RecentProjects() {
       return setCurrentSlide(currentSlide - 1);
     }
   }
+
   const router = useRouter();
+
   return (
     <section id="projects" className={`${styles.projects}`}>
       <div className={styles.projectsHeader}>

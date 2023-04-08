@@ -1,0 +1,147 @@
+.article {
+  margin: 80px auto 0;
+}
+.backButton {
+  position: absolute;
+  top: 130px;
+  background-color: unset;
+  border: unset;
+  outline: unset;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  gap: 10px;
+}
+.backButton > span {
+  display: none;
+}
+.backButtonIcon {
+  width: 14px;
+  height: 16px;
+}
+.articleHeaderContainer {
+  margin: 0 auto;
+  padding: 50px 10% 2rem;
+  background-color: #f8f8fa;
+  min-height: 440px;
+}
+.articleHeader {
+  font-size: 32px;
+  margin-top: 50px;
+  line-height: 40px;
+}
+.articleThumbnailContainer {
+  width: 80%;
+  margin: -5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.articleThumbnail {
+  width: 100%;
+  height: auto;
+}
+.articleLinkContainer {
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.linkLive {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+.linkLiveIcon {
+  width: 10px;
+  height: 12px;
+}
+.articleContainer {
+  margin: 30px 15% 70px;
+}
+.articleText {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (min-width: 345px) {
+  .articleThumbnailContainer {
+    margin: -8rem auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .articleThumbnailContainer {
+    margin: -12rem auto 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .articleHeaderContainer {
+    padding-top: 170px;
+    height: 890px;
+  }
+  .backButton,
+  .linkLive {
+    gap: 20px;
+  }
+  .backButton {
+    top: 170px;
+  }
+  .backButtonIcon {
+    width: 20px;
+    height: 22.86px;
+  }
+  .backButton > span {
+    display: block;
+    font-weight: 500;
+  }
+  .linkLiveIcon {
+    width: 14px;
+    height: 16px;
+  }
+  .articleHeader {
+    margin: 75px 10% 0;
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: 0.08em;
+  }
+  .articleThumbnailContainer {
+    margin: -20rem auto 0;
+    flex-direction: column-reverse;
+    gap: 70px;
+  }
+  .articleThumbnail {
+    object-fit: cover;
+    height: auto;
+    max-height: 900px;
+    background-position: top;
+  }
+  .articleLinkContainer {
+    margin: 0 10%;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  .articleContainer {
+    margin: 70px 25% 100px;
+  }
+  .articleText {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.recomendationHeader {
+  width: 100%;
+  text-align: center;
+  margin: 17px 0;
+}
+@media screen and (min-width: 1000px) {
+  .recomendationHeader {
+    margin: 38px 0;
+  }
+}

@@ -1,5 +1,11 @@
 async function fetchData({ url, method = "GET" }) {
-  const base_url = window.location.origin;
+  let base_url;
+  if (typeof window !== "undefined") {
+    base_url = window.location.origin;
+  } 
+  else {
+    base_url = "https://gohand-silitonga.vercel.app/";
+  }
   const response = await fetch(`${base_url}/${url}`, {
     method,
     headers: {

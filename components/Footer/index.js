@@ -9,8 +9,8 @@ export default function Footer() {
       <Image
         className={styles.footerImage}
         src="/assets/pattern.webp"
-        width={1440}
-        height={970}
+        width={1622}
+        height={1177}
         alt=""
       />
       <div className={styles.cta}>
