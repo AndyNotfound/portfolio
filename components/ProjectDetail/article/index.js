@@ -1,16 +1,21 @@
 import styles from "@/styles/components/ProjectDetail.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Article({ props }) {
   const {
     frontmatter: { coverImage, fullTitle, by, live },
     content,
   } = props;
+  const router = useRouter();
   return (
     <section id="article" className={styles.article}>
       <div className={styles.articleHeaderContainer}>
-        <button className={`paragraph ${styles.backButton}`}>
+        <button
+          onClick={() => router.back()}
+          className={`paragraph ${styles.backButton}`}
+        >
           <Image
             className={styles.backButtonIcon}
             src="/assets/arrow-left-solid.svg"

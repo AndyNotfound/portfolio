@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import { fetchData } from "@/helpers";
 import styles from "@/styles/components/Projects.module.css";
 import ProjectsCard from "@/components/ProjectsCard";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 export default function Projects({ projects }) {
   return (
@@ -22,8 +25,28 @@ export default function Projects({ projects }) {
 }
 
 export async function getStaticProps() {
-  const projects = await fetchData({
-    url: "api/projects",
+  const files = fs.readdirSync(path.join(process.cwd(), "projects"));
+
+  const projects = files.map((filename) => {
+    const slug = filename.replace(".md", "");
+
+    const markdownWithMeta = fs.readFileSync(
+      path.join(process.cwd(), "projects", filename),
+      "utf-8"
+    );
+
+    const { data: frontmatter } = matter(markdownWithMeta);
+
+    return {
+      slug,
+      frontmatter,
+    };
   });
-  return { props: { projects } };
+
+  const shuffledProjects = projects.sort(() => Math.random() - 0.5);
+  return {
+    props: {
+      projects: shuffledProjects,
+    },
+  };
 }

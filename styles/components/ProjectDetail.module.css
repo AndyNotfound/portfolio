@@ -140,8 +140,37 @@
   text-align: center;
   margin: 17px 0;
 }
-@media screen and (min-width: 1000px) {
+.recomendationContainer{
+  display: flex;
+  margin: 50px 10% 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.recomendationImageContainer{
+  min-width: 297px;
+  width: 100%;
+  height: fit-content;
+}
+.recomendationImage{
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1300px) {
   .recomendationHeader {
     margin: 38px 0;
+  }
+  .recomendationContainer{
+    flex-direction: row;
+    margin: 100px 10% 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+  }
+  .recomendationImageContainer{
+    min-width: 320px;
+    min-height: 322px;
   }
 }

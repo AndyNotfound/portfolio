@@ -1,29 +1,16 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { fetchData } from "@/helpers";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import ProjectsCard from "@/components/ProjectsCard";
 import styles from "@/styles/components/Home.module.css";
 
-export default function RecentProjects() {
-  const [projects, setProjects] = useState([]);
+export default function RecentProjects({ projects }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const getProjects = async () => {
-      const response = await fetchData({
-        url: "api/projects",
-      });
-      setProjects(response);
-    };
-
-    getProjects();
-  }, []);
-
   function nextSlide() {
-    if (currentSlide < projects.length - 1) {
+    if (currentSlide < 4) {
       return setCurrentSlide(currentSlide + 1);
     }
   }
@@ -79,9 +66,7 @@ export default function RecentProjects() {
           </Carousel>
           <button
             className={`${
-              currentSlide === projects.length - 1
-                ? styles.buttonHide
-                : styles.buttonShow
+              currentSlide === 3 ? styles.buttonHide : styles.buttonShow
             } ${styles.carouselButtonX} ${styles.carouselButtonRight}`}
             onClick={nextSlide}
           >
