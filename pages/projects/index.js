@@ -1,25 +1,36 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { fetchData } from "@/helpers";
 import styles from "@/styles/components/Projects.module.css";
 import ProjectsCard from "@/components/ProjectsCard";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Head from "next/head";
 
 export default function Projects({ projects }) {
   return (
     <>
-      <Navbar />
-      <main className={`${styles.projects} wrapper`}>
-        <h1 className={`page-header ${styles.projectsHeadline}`}>Creative Ventures</h1>
+      <Head>
+        <title>Creative Ventures and Projects | Gohand Silitonga</title>
+        <meta charset="UTF-8" />
+        <meta
+          name="description"
+          content="Explore Gohand Silitonga's portfolio of visually stunning and user-optimized creative ventures and projects, including websites, applications, and web apps. Contact him for a seamless user experience today."
+        />
+        <meta
+          name="keywords"
+          content="Gohand Silitonga, Creative ventures, visually stunning, Batam, Website, Application, Web App, Projects, Responsive Web Design, User Experience"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <div className={`${styles.projects} wrapper`}>
+        <h1 className={`page-header ${styles.projectsHeadline}`}>
+          Creative Ventures
+        </h1>
         <section className={styles.projectsContainer}>
           {projects?.map((item, index) => {
             return <ProjectsCard key={index} data={item} />;
           })}
         </section>
-      </main>
-      <Footer />
+      </div>
     </>
   );
 }

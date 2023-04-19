@@ -56,7 +56,7 @@
   color: var(--headline);
   transition: all ease-out 0.4s;
 }
-.navbarLink:hover {
+.navbarLink:hover, .navbarLinkActive {
   color: var(--button);
 }
 

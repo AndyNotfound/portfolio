@@ -1,12 +1,24 @@
 import styles from "@/styles/components/Navbar.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    setOpen(false);
+  }, [router.pathname]);
+  const navbarRoute = [
+    { name: "Home", link: "/" },
+    { name: "Projects", link: "/projects" },
+    { name: "About", link: "/about" },
+  ];
   return (
     <nav className={styles.navbar}>
-      <Link href="/" className={styles.navbarLogo}>A.</Link>
+      <Link href="/" className={styles.navbarLogo}>
+        A.
+      </Link>
       <button
         className={styles.navbarMenuButton}
         onClick={() => {
@@ -22,15 +34,19 @@ export default function Navbar() {
         className={` ${styles.navbarLinksContainer} ${open ? styles.open : ""}`}
       >
         <div className={styles.navbarLinkListContainer}>
-          <Link className={styles.navbarLink} href="/">
-            Home
-          </Link>
-          <Link className={styles.navbarLink} href="/projects" prefetch>
-            Projects
-          </Link>
-          <Link className={styles.navbarLink} href="/about" as="creative-developer" prefetch>
-            About
-          </Link>
+          {navbarRoute?.map((item, index) => {
+            return (
+              <Link
+                key={index}
+                className={`${
+                  router.pathname == item.link ? styles.navbarLinkActive : ""
+                } ${styles.navbarLink}`}
+                href={item.link}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </nav>

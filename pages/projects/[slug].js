@@ -1,21 +1,37 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Article from "@/components/ProjectDetail/article";
 import Recommendation from "@/components/ProjectDetail/recommendation";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Head from "next/head";
 
 export default function Project({ article, recommendation }) {
+  function capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+  }
+
+  const {
+    frontmatter: {
+      by: author,
+      fullTitle,
+      excerpt,
+      keyword = "Gohand Silitonga, Website, Application, Creative",
+    },
+  } = article;
+
   return (
     <>
-      <Navbar />
-      <main>
-        <Article props={article} />
-        <hr className="line" />
-        <Recommendation props={recommendation} />
-      </main>
-      <Footer />
+      <Head>
+        <title>{capitalizeFirstLetter(fullTitle.toLowerCase())}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={excerpt} />
+        <meta name="keywords" content={keyword} />
+        <meta name="author" content={author} />
+      </Head>
+      <Article props={article} />
+      <hr className="line" />
+      <Recommendation props={recommendation} />
     </>
   );
 }
