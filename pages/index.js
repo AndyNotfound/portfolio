@@ -13,7 +13,21 @@ export default function Home({ projects }) {
         <title>
           Gohand Silitonga | Creative Developer &amp; UI Designer Batam
         </title>
-        <meta charset="UTF-8" />
+        <meta
+          property="title"
+          content="Gohand Silitonga | Creative Developer &amp; UI Designer Batam"
+        />
+        <meta
+          property="og:title"
+          content="Gohand Silitonga | Creative Developer &amp; UI Designer Batam"
+        />
+        <meta
+          property="og:description"
+          content="Craft visually stunning, responsive, and user-friendly websites with Gohand Silitonga, a Creative Developer &amp; UI Designer in Batam. Enhance your online presence with optimized user experiences today."
+        />
+        <meta property="og:image" content="/assets/hero-illustration.webp" />
+        <meta property="og:url" content="https://gohand-silitonga.my.id/" />
+        <meta property="og:type" content="website" />
         <meta
           name="description"
           content="Craft visually stunning, responsive, and user-friendly websites with Gohand Silitonga, a Creative Developer &amp; UI Designer in Batam. Enhance your online presence with optimized user experiences today."
@@ -22,6 +36,7 @@ export default function Home({ projects }) {
           name="keywords"
           content="Gohand Silitonga, Creative Developer, UI Designer, Batam, Frontend Developer, Responsive Web Design, User Experience, Web Development"
         />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Hero />
