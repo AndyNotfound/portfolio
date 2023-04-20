@@ -9,8 +9,8 @@ export default function Projects({ projects }) {
   return (
     <>
       <Head>
-        <title>Creative Ventures and Projects | Gohand Silitonga</title>
         <meta charset="UTF-8" />
+        <title>Creative Ventures and Projects | Gohand Silitonga</title>
         <meta
           name="description"
           content="Explore Gohand Silitonga's portfolio of visually stunning and user-optimized creative ventures and projects, including websites, applications, and web apps. Contact him for a seamless user experience today."
@@ -20,6 +20,17 @@ export default function Projects({ projects }) {
           content="Gohand Silitonga, Creative ventures, visually stunning, Batam, Website, Application, Web App, Projects, Responsive Web Design, User Experience"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          property="og:title"
+          content="Creative Ventures and Projects | Gohand Silitonga"
+        />
+        <meta
+          property="og:description"
+          content="Explore Gohand Silitonga's portfolio of visually stunning and user-optimized creative ventures and projects, including websites, applications, and web apps. Contact him for a seamless user experience today."
+        />
+        <meta property="og:image" content="https://i.postimg.cc/wMRTD2Zg/Gohand-Silitonga-s-Projects.jpg" />
+        <meta property="og:url" content="https://gohand-silitonga.my.id/projects" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className={`${styles.projects} wrapper`}>
         <h1 className={`page-header ${styles.projectsHeadline}`}>

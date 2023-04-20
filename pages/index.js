@@ -27,7 +27,7 @@ export default function Home({ projects }) {
         />
         <meta
           property="og:image"
-          content="https://i.postimg.cc/4yFqTBHr/hero-illustration.webp"
+          content="https://i.postimg.cc/3NVnWr5n/Gohand-Siitonga.jpg"
         />
         <meta property="og:url" content="https://gohand-silitonga.my.id/" />
         <meta property="og:type" content="website" />

@@ -16,18 +16,27 @@ export default function Project({ article, recommendation }) {
       fullTitle,
       excerpt,
       keyword = "Gohand Silitonga, Website, Application, Creative",
-    },
+      coverImage
+    }, slug
   } = article;
 
   return (
     <>
       <Head>
-        <title>{capitalizeFirstLetter(fullTitle.toLowerCase())}</title>
         <meta charset="UTF-8" />
+        <title>{capitalizeFirstLetter(fullTitle.toLowerCase())}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={excerpt} />
         <meta name="keywords" content={keyword} />
         <meta name="author" content={author} />
+        <meta
+          property="og:title"
+          content={capitalizeFirstLetter(fullTitle.toLowerCase())}
+        />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={coverImage} />
+        <meta property="og:url" content={`https://gohand-silitonga.my.id/projects/${slug}`} />
+        <meta property="og:type" content="website" />
       </Head>
       <Article props={article} />
       <hr className="line" />
