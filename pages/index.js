@@ -25,7 +25,10 @@ export default function Home({ projects }) {
           property="og:description"
           content="Craft visually stunning, responsive, and user-friendly websites with Gohand Silitonga, a Creative Developer &amp; UI Designer in Batam. Enhance your online presence with optimized user experiences today."
         />
-        <meta property="og:image" content="/assets/hero-illustration.webp" />
+        <meta
+          property="og:image"
+          content="https://i.postimg.cc/4yFqTBHr/hero-illustration.webp"
+        />
         <meta property="og:url" content="https://gohand-silitonga.my.id/" />
         <meta property="og:type" content="website" />
         <meta

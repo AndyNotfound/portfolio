@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
       <Image
         className={styles.heroImage}
-        src="/assets/hero-Illustration.webp"
+        src="/assets/hero-illustration.webp"
         width={566}
         height={566}
         alt=""
