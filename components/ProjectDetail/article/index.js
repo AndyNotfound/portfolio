@@ -18,8 +18,8 @@ export default function Article({ props }) {
         >
           <Image
             className={styles.backButtonIcon}
-            src="/assets/arrow-left-solid.svg"
-            width={14}
+            src="/assets/chevron-left.svg"
+            width={16}
             height={16}
             alt=""
           />

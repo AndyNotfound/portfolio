@@ -14,9 +14,10 @@
 }
 .backButton > span {
   display: none;
+  vertical-align: middle;
 }
-.backButtonIcon {
-  width: 14px;
+.backButtonIcon{
+  width: 16px;
   height: 16px;
 }
 .articleHeaderContainer {
@@ -53,6 +54,9 @@
   align-items: center;
   text-decoration: none;
 }
+.linkLive:hover img {
+  transform: translateX(5px);
+}
 .linkLiveIcon {
   width: 10px;
   height: 12px;
@@ -83,16 +87,18 @@
     padding-top: 170px;
     height: 890px;
   }
-  .backButton,
+  .backButton {
+    gap: 15px;
+  }
   .linkLive {
-    gap: 20px;
+    gap: 15px;
   }
   .backButton {
     top: 170px;
   }
   .backButtonIcon {
-    width: 20px;
-    height: 22.86px;
+    width: 16px;
+    height: 16px;
   }
   .backButton > span {
     display: block;
@@ -140,36 +146,41 @@
   text-align: center;
   margin: 17px 0;
 }
-.recomendationContainer{
+.recomendationContainer {
   display: flex;
   margin: 50px 10% 0;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
-.recomendationImageContainer{
+.recomendationImageContainer {
   min-width: 297px;
   width: 100%;
   height: fit-content;
+  overflow: hidden;
 }
-.recomendationImage{
+.recomendationImage {
   background-size: cover;
   background-position: center;
   width: 100%;
   height: auto;
 }
+.recomendationImage:hover {
+  transform: scale(1.2);
+  transition: all ease-out 0.4s;
+}
 @media screen and (min-width: 1300px) {
   .recomendationHeader {
     margin: 38px 0;
   }
-  .recomendationContainer{
+  .recomendationContainer {
     flex-direction: row;
     margin: 100px 10% 0;
     justify-content: space-between;
     align-items: center;
     gap: 45px;
   }
-  .recomendationImageContainer{
+  .recomendationImageContainer {
     min-width: 320px;
     min-height: 322px;
   }
