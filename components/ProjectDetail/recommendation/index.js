@@ -6,7 +6,7 @@ export default function Recommendation({ props }) {
   return (
     <section id="recommendation">
       <h2 className={`tittle-header ${styles.recomendationHeader}`}>
-        OTHER VENTURES
+        More Creative Project
       </h2>
       <div className={styles.recomendationContainer}>
         {props?.map((item, index) => {

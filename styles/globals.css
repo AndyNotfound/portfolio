@@ -14,6 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   text-align: unset;
+  cursor: none;
 }
 body {
   background-color: var(--background);
@@ -31,12 +32,15 @@ body {
 .line {
   height: 0.5px;
 }
+.highlight {
+  padding: 2px 10px;
+  background-color: var(--button);
+}
 .primary-button {
   background-color: var(--button);
   border: 1px solid var(--button);
   outline: 0;
   padding: 15px 42px;
-  cursor: pointer;
   transition: all ease-out 0.4s;
   color: var(--button-text);
   font-family: var(--poppins);
@@ -52,6 +56,26 @@ body {
   background-color: var(--background) !important;
   border: 1px solid var(--button-text);
 }
+@-webkit-keyframes up {
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes up {
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes draw {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes draw {
+  100% {
+    width: 100%;
+  }
+}
 .page-header {
   color: var(--headline);
   font-family: var(--oxanium);
@@ -61,6 +85,33 @@ body {
   text-transform: uppercase;
   font-size: 24px;
   line-height: 30px;
+}
+.page-header {
+  position: relative;
+  display: block;
+  transform: translateY(6rem);
+  -webkit-animation: up 500ms linear forwards;
+  animation: up 500ms linear forwards;
+  z-index: 1;
+}
+.page-header::before,
+.page-header::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 1px;
+  left: 0;
+  z-index: -1;
+}
+.page-header::before {
+  top: 1.4rem;
+  -webkit-animation: draw 500ms linear 1s forwards;
+  animation: draw 500ms linear 1s forwards;
+}
+.page-header::after {
+  bottom: 0.4rem;
+  -webkit-animation: draw 500ms linear 1s forwards;
+  animation: draw 500ms linear 1s forwards;
 }
 .tittle-header {
   font-family: var(--oxanium);
@@ -148,6 +199,32 @@ body {
   }
   .notfoundDetail > a {
     width: fit-content;
+  }
+  .cursor {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    background: var(--button-text);
+    pointer-events: none;
+    z-index: 100;
+    transition: transform 0.5s;
+  }
+  .circle {
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    border-radius: 50%;
+    border: 1px solid var(--button);
+    transition: all 0.2s cubic-bezier(0, 0.5, 1, 1);
+    z-index: 100;
   }
 }
 

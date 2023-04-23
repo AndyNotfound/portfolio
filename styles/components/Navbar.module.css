@@ -23,7 +23,6 @@
   outline: none;
   border: none;
   background-color: unset;
-  cursor: pointer;
 }
 .navbarMenuIcon {
   margin: auto;
@@ -56,10 +55,10 @@
   color: var(--headline);
   transition: all ease-out 0.4s;
 }
-.navbarLink:hover, .navbarLinkActive {
+.navbarLink:hover,
+.navbarLinkActive {
   color: var(--button);
 }
-
 @keyframes top-spin {
   0% {
     transform: translateY(0px) rotate(0deg);
@@ -90,7 +89,6 @@
   width: 50px;
   height: 40px;
   padding: 10px;
-  cursor: pointer;
   overflow: hidden;
 }
 .burger span {

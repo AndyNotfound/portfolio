@@ -18,7 +18,7 @@ export default function Article({ props }) {
         >
           <Image
             className={styles.backButtonIcon}
-            src="/assets/chevron-left.svg"
+            src="/assets/back.svg"
             width={16}
             height={16}
             alt=""
@@ -43,7 +43,7 @@ export default function Article({ props }) {
             Live Preview
             <Image
               className={styles.linkLiveIcon}
-              src="/assets/arrow-right-solid.svg"
+              src="/assets/live.svg"
               width={14}
               height={16}
               alt=""

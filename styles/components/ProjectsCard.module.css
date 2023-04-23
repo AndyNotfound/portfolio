@@ -47,7 +47,8 @@
   border: unset;
   outline: unset;
   vertical-align: middle;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .buttonIcon {
   width: auto;

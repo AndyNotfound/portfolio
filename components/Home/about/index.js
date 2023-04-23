@@ -8,15 +8,16 @@ export default function AboutMe() {
       <div className={styles.aboutImageContainer}>
         <Image
           className={styles.aboutImage}
-          src="/assets/AboutMe-Illustration.webp"
+          src="/assets/aboutme.webp"
           width={1122}
           height={783}
           alt=""
         />
         <div className={styles.aboutDetails}>
           <p className="paragraph">
-            I create visually stunning and user-friendly websites that are
-            responsive and optimized for a seamless user experience.
+            I&#39;m Gohand, a Batam-based creative developer. <span className="highlight">I create visually
+            stunning and user-friendly websites</span> that are optimized for seamless
+            user experience.
           </p>
         </div>
       </div>

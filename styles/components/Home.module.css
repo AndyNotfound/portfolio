@@ -18,52 +18,6 @@
 }
 .heroHeadline {
   margin: 0 0 10px 0;
-  position: relative;
-  display: block;
-  transform: translateY(6rem);
-  -webkit-animation: up 500ms linear forwards;
-  animation: up 500ms linear forwards;
-  z-index: 1;
-}
-.heroHeadline::before,
-.heroHeadline::after {
-  position: absolute;
-  content: "";
-  width: 0px;
-  height: 1px;
-  left: 0;
-  z-index: -1;
-}
-.heroHeadline::before {
-  top: 1.4rem;
-  -webkit-animation: draw 500ms linear 1s forwards;
-  animation: draw 500ms linear 1s forwards;
-}
-.heroHeadline::after {
-  bottom: 0.4rem;
-  -webkit-animation: draw 500ms linear 1s forwards;
-  animation: draw 500ms linear 1s forwards;
-}
-@-webkit-keyframes up {
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes up {
-  100% {
-    transform: translateY(0);
-  }
-}
-@-webkit-keyframes draw {
-  100% {
-    width: 100%;
-  }
-}
-@keyframes draw {
-  100% {
-    width: 100%;
-  }
 }
 .heroImage {
   width: 100%;

@@ -27,7 +27,9 @@
   }
   .introImage {
     max-width: 389px;
-    max-height: 605px;
+    min-height: 605px;
+    max-width: 489px;
+    max-height: 705px;
   }
   .introDetail {
     gap: 70px;

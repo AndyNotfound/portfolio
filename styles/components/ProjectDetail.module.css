@@ -60,6 +60,7 @@
 .linkLiveIcon {
   width: 10px;
   height: 12px;
+  rotate: -45deg;
 }
 .articleContainer {
   margin: 30px 15% 70px;
@@ -91,7 +92,7 @@
     gap: 15px;
   }
   .linkLive {
-    gap: 15px;
+    gap: 10px;
   }
   .backButton {
     top: 170px;
