@@ -41,7 +41,7 @@ export default function About() {
           height={605}
           alt=""
         />
-        <div class={styles.introDetail}>
+        <div className={styles.introDetail}>
           <div>
             <h1 className="page-header">
               A CREATIVE developer BASED IN BATAM, INDONESIA
