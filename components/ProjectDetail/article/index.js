@@ -2,6 +2,7 @@ import styles from "@/styles/components/ProjectDetail.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { marked } from "marked";
 
 export default function Article({ props }) {
   const {
@@ -39,20 +40,27 @@ export default function Article({ props }) {
           <p className="paragraph">
             By <span className={styles.author}>{by}</span>
           </p>
-          <Link href={live} className={`paragraph ${styles.linkLive}`}>
-            Live Preview
-            <Image
-              className={styles.linkLiveIcon}
-              src="/assets/live.svg"
-              width={14}
-              height={16}
-              alt=""
-            />
-          </Link>
+          {live !== "" && live !== null ? (
+            <Link href={live} className={`paragraph ${styles.linkLive}`}>
+              Live Preview
+              <Image
+                className={styles.linkLiveIcon}
+                src="/assets/live.svg"
+                width={14}
+                height={16}
+                alt=""
+              />
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       </div>
       <div className={styles.articleContainer}>
-        <p className={`paragraph ${styles.articleText}`}>{content}</p>
+        <div
+          className={`paragraph ${styles.articleText}`}
+          dangerouslySetInnerHTML={{ __html: marked(content) }}
+        ></div>
       </div>
     </section>
   );

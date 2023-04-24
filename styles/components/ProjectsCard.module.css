@@ -23,6 +23,7 @@
   line-height: 25px;
   letter-spacing: 0.08em;
   color: var(--headline);
+  text-transform: uppercase;
 }
 .productCardDesc {
   width: 100%;
@@ -89,6 +90,9 @@
   .productCardDesc {
     width: 50%;
     gap: 50px;
+  }
+  .productCardDesc > p {
+    -webkit-line-clamp: 3;
   }
   .productCardButtonGroup {
     row-gap: 20px;
