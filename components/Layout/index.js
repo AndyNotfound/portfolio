@@ -1,45 +1,52 @@
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Layout({ children }) {
+  const cursorRef = useRef(null);
+  const circleRef = useRef(null);
+
   useEffect(() => {
     function handleMouseMove(event) {
       requestAnimationFrame(() => {
-        const cursor = document.getElementById("cursor");
-        const circle = document.getElementById("circle");
-        var cursor_top = event.pageY - cursor.clientHeight / 2;
-        var cursor_left = event.pageX - cursor.clientWidth / 2;
-        var circle_top = event.pageY - circle.clientHeight / 2;
-        var circle_left = event.pageX - circle.clientWidth / 2;
+        var cursor_top = event.pageY - cursorRef.current.clientHeight / 2;
+        var cursor_left = event.pageX - cursorRef.current.clientWidth / 2;
+        var circle_top = event.pageY - circleRef.current.clientHeight / 2;
+        var circle_left = event.pageX - circleRef.current.clientWidth / 2;
 
-        // Check if cursor is outside the left boundary of the viewport
+        // Check if cursorRef.current is outside the left boundary of the viewport
         if (cursor_left < 0) {
           cursor_left = 0;
-          circle_left = cursor.clientWidth;
+          circle_left = cursorRef.current.clientWidth;
         }
 
-        // Check if cursor is outside the right boundary of the viewport
-        if (cursor_left > window.innerWidth - cursor.clientWidth - 20) {
-          cursor_left = window.innerWidth - cursor.clientWidth * 2;
+        // Check if cursorRef.current is outside the right boundary of the viewport
+        if (
+          cursor_left >
+          window.innerWidth - cursorRef.current.clientWidth - 20
+        ) {
+          cursor_left = window.innerWidth - cursorRef.current.clientWidth * 2;
           circle_left =
-            cursor_left + cursor.clientWidth - circle.clientWidth - 10;
+            cursor_left +
+            cursorRef.current.clientWidth -
+            circleRef.current.clientWidth -
+            10;
         }
 
-        // Check if circle is outside the left boundary of the viewport
+        // Check if circleRef.current is outside the left boundary of the viewport
         if (circle_left < 0) {
           circle_left = 0;
         }
 
-        // Check if circle is outside the right boundary of the viewport
-        if (circle_left > window.innerWidth - circle.clientWidth) {
-          circle_left = window.innerWidth - circle.clientWidth;
+        // Check if circleRef.current is outside the right boundary of the viewport
+        if (circle_left > window.innerWidth - circleRef.current.clientWidth) {
+          circle_left = window.innerWidth - circleRef.current.clientWidth;
         }
 
-        cursor.style.top = cursor_top + "px";
-        cursor.style.left = cursor_left + "px";
-        circle.style.top = circle_top + "px";
-        circle.style.left = circle_left + "px";
+        cursorRef.current.style.top = cursor_top + "px";
+        cursorRef.current.style.left = cursor_left + "px";
+        circleRef.current.style.top = circle_top + "px";
+        circleRef.current.style.left = circle_left + "px";
       });
     }
     window.addEventListener("mousemove", handleMouseMove);
@@ -50,8 +57,8 @@ export default function Layout({ children }) {
   }, []);
   return (
     <>
-      <div id="cursor" className="cursor"></div>
-      <div id="circle" className="circle"></div>
+      <div className="cursor" ref={cursorRef}></div>
+      <div className="circle" ref={circleRef}></div>
       <Navbar />
       <main>{children}</main>
       <Footer />

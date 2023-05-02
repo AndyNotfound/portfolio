@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import ProjectsCard from "@/components/ProjectsCard";
 import styles from "@/styles/components/Home.module.css";
+import Link from "next/link";
 
 export default function RecentProjects({ projects }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -27,12 +28,9 @@ export default function RecentProjects({ projects }) {
     <section id="projects" className={`${styles.projects}`}>
       <div className={styles.projectsHeader}>
         <h2 className="tittle-header">Recent Projects</h2>
-        <button
-          className="primary-button"
-          onClick={() => router.push("/projects")}
-        >
+        <Link href="/projects" className="primary-button">
           View All
-        </button>
+        </Link>
       </div>
       <div className={styles.projectsList}>
         <div className={styles.carouselContainer}>

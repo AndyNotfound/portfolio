@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/components/ProjectsCard.module.css";
-import { useRouter } from "next/router";
-
 
 export default function ProjectsCard({ data }) {
-  const router = useRouter();
 
-  const {slug, frontmatter: {coverImage, title, excerpt, live}} = data;
+  const {
+    slug,
+    frontmatter: { coverImage, title, excerpt, live },
+  } = data;
   return (
     <div className={styles.productCard}>
       <div className={styles.productCardThumbnailHolder}>
@@ -23,9 +23,9 @@ export default function ProjectsCard({ data }) {
         <div className={styles.productCardDesc}>
           <p className="paragraph">{excerpt}</p>
           <div className={styles.productCardButtonGroup}>
-            <button
+            <Link
               className={`paragraph ${styles.buttonText} ${styles.productCardButton}`}
-              onClick={() => router.push(`/projects/${slug}`)}
+              href={`/projects/${slug}`}
             >
               <Image
                 className={styles.buttonIcon}
@@ -35,7 +35,7 @@ export default function ProjectsCard({ data }) {
                 alt=""
               />
               View&nbsp;Study&nbsp;Case
-            </button>
+            </Link>
             {live !== "" && live !== null ? (
               <Link href={live} className={styles.productCardButton}>
                 <Image
