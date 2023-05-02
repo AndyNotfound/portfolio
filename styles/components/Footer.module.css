@@ -46,7 +46,8 @@
 }
 .socialLinks {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 20px;
 }
 .linkTarget {
   text-decoration: none;

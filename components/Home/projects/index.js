@@ -1,7 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { useState } from "react";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import ProjectsCard from "@/components/ProjectsCard";
 import styles from "@/styles/components/Home.module.css";
@@ -21,8 +20,6 @@ export default function RecentProjects({ projects }) {
       return setCurrentSlide(currentSlide - 1);
     }
   }
-
-  const router = useRouter();
 
   return (
     <section id="projects" className={`${styles.projects}`}>
