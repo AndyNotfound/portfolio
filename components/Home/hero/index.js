@@ -8,7 +8,7 @@ export default function Hero() {
       <div className={styles.heroContent}>
         <p className={styles.heroSecondHeadline}>Gohand Silitonga</p>
         <div>
-          <h1 className={`page-header ${styles.heroHeadline}`}>
+          <h1 className={`page-header animate ${styles.heroHeadline}`}>
             A creative developer from indonesia
           </h1>
         </div>

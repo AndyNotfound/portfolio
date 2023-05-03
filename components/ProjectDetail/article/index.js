@@ -26,7 +26,7 @@ export default function Article({ props }) {
           />
           <span>Go Back</span>
         </button>
-        <h1 className={`page-header ${styles.articleHeader}`}>{fullTitle}</h1>
+        <h1 className={`page-header animate ${styles.articleHeader}`}>{fullTitle}</h1>
       </div>
       <div className={styles.articleThumbnailContainer}>
         <Image

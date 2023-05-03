@@ -54,6 +54,7 @@
   font-weight: 500;
   color: var(--headline);
   transition: all ease-out 0.4s;
+  text-transform: uppercase;
 }
 .navbarLink:hover,
 .navbarLinkActive {

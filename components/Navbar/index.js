@@ -12,6 +12,7 @@ export default function Navbar() {
   const navbarRoute = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
+    { name: "Certificate", link: "/certificate" },
     { name: "About", link: "/about" },
   ];
   return (

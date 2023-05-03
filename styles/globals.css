@@ -85,7 +85,7 @@ body {
   font-size: 24px;
   line-height: 30px;
 }
-.page-header {
+.page-header.animate {
   position: relative;
   display: block;
   transform: translateY(6rem);
@@ -93,8 +93,8 @@ body {
   animation: up 500ms linear forwards;
   z-index: 1;
 }
-.page-header::before,
-.page-header::after {
+.page-header.animate::before,
+.page-header.animate::after {
   position: absolute;
   content: "";
   width: 0px;
@@ -102,12 +102,12 @@ body {
   left: 0;
   z-index: -1;
 }
-.page-header::before {
+.page-header.animate::before {
   top: 1.4rem;
   -webkit-animation: draw 500ms linear 1s forwards;
   animation: draw 500ms linear 1s forwards;
 }
-.page-header::after {
+.page-header.animate::after {
   bottom: 0.4rem;
   -webkit-animation: draw 500ms linear 1s forwards;
   animation: draw 500ms linear 1s forwards;

@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/components/Footer.module.css";
 import { downloadCv } from "@/helpers";
+import { useState } from "react";
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
   const socialLinks = [
     {
       logo: "instagram.svg",
@@ -37,7 +39,7 @@ export default function Footer() {
         priority
       />
       <div className={styles.cta}>
-        <h2 className={`tittle-header ${styles.ctaHeader}`}>
+        <h2 className={`page-header ${styles.ctaHeader}`}>
           LET’S WORK TOGERTHER
         </h2>
         <button onClick={downloadCv} className="primary-button">
@@ -62,7 +64,7 @@ export default function Footer() {
           <p className="paragraph">Marina City Street, Batam</p>
         </div>
         <div className={styles.link}>
-          <p className={styles.linkTitle}>Social Links</p>
+          <p className={styles.linkTitle}>Socials Links</p>
           <div className={styles.socialLinks}>
             {socialLinks?.map((item, index) => {
               const { platform: name, logo, link } = item;
@@ -82,6 +84,84 @@ export default function Footer() {
               );
             })}
           </div>
+          {/* <div className={styles.linkList}>
+            <div className={styles.list}>
+              <button
+                onClick={() => setOpen(!open)}
+                className={`paragraph ${styles.accord}`}
+              >
+                Social Media
+                <Image
+                  className={styles.accordIcon}
+                  src="/assets/back.svg"
+                  width={16}
+                  height={16}
+                  alt=""
+                />
+              </button>
+              <div
+                className={` ${open ? styles.active : ""} ${
+                  styles.socialLinks
+                }`}
+              >
+                {socialLinks?.map((item, index) => {
+                  const { platform: name, logo, link } = item;
+                  return (
+                    <Link
+                      key={index}
+                      className={`${styles.linkTarget} paragraph`}
+                      href={link}
+                    >
+                      <Image
+                        src={`/assets/${logo}`}
+                        width={22}
+                        height={22}
+                        alt={name}
+                      />
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            <div className={styles.list}>
+              <button
+                onClick={() => setOpen(!open)}
+                className={`paragraph ${styles.accord}`}
+              >
+                Freelance
+                <Image
+                  className={styles.accordIcon}
+                  src="/assets/back.svg"
+                  width={16}
+                  height={16}
+                  alt=""
+                />
+              </button>
+              <div
+                className={` ${open ? styles.active : ""} ${
+                  styles.socialLinks
+                }`}
+              >
+                {socialLinks?.map((item, index) => {
+                  const { platform: name, logo, link } = item;
+                  return (
+                    <Link
+                      key={index}
+                      className={`${styles.linkTarget} paragraph`}
+                      href={link}
+                    >
+                      <Image
+                        src={`/assets/${logo}`}
+                        width={22}
+                        height={22}
+                        alt={name}
+                      />
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </footer>

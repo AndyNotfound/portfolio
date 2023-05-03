@@ -40,7 +40,7 @@ export default function Projects({ projects }) {
       </Head>
       <div className={`${styles.projects} wrapper`}>
         <div>
-          <h1 className={`page-header ${styles.projectsHeadline}`}>
+          <h1 className={`page-header animate ${styles.projectsHeadline}`}>
             Creative Projects
           </h1>
         </div>

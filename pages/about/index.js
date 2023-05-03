@@ -43,7 +43,7 @@ export default function About() {
         />
         <div className={styles.introDetail}>
           <div>
-            <h1 className="page-header">
+            <h1 className="page-header animate">
               A CREATIVE developer BASED IN BATAM, INDONESIA
             </h1>
           </div>
