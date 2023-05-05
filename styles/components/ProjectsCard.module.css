@@ -64,7 +64,7 @@
 .productCardThumbnailHolder {
   width: 100%;
   aspect-ratio: 1;
-  max-height: 400px;
+  max-height: 250px;
   position: relative;
 }
 .productCardThumbnailHolder > img {

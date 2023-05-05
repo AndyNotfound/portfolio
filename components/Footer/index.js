@@ -5,7 +5,6 @@ import { downloadCv } from "@/helpers";
 import { useState } from "react";
 
 export default function Footer() {
-  const [open, setOpen] = useState(false);
   const socialLinks = [
     {
       logo: "instagram.svg",
@@ -84,84 +83,6 @@ export default function Footer() {
               );
             })}
           </div>
-          {/* <div className={styles.linkList}>
-            <div className={styles.list}>
-              <button
-                onClick={() => setOpen(!open)}
-                className={`paragraph ${styles.accord}`}
-              >
-                Social Media
-                <Image
-                  className={styles.accordIcon}
-                  src="/assets/back.svg"
-                  width={16}
-                  height={16}
-                  alt=""
-                />
-              </button>
-              <div
-                className={` ${open ? styles.active : ""} ${
-                  styles.socialLinks
-                }`}
-              >
-                {socialLinks?.map((item, index) => {
-                  const { platform: name, logo, link } = item;
-                  return (
-                    <Link
-                      key={index}
-                      className={`${styles.linkTarget} paragraph`}
-                      href={link}
-                    >
-                      <Image
-                        src={`/assets/${logo}`}
-                        width={22}
-                        height={22}
-                        alt={name}
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-            <div className={styles.list}>
-              <button
-                onClick={() => setOpen(!open)}
-                className={`paragraph ${styles.accord}`}
-              >
-                Freelance
-                <Image
-                  className={styles.accordIcon}
-                  src="/assets/back.svg"
-                  width={16}
-                  height={16}
-                  alt=""
-                />
-              </button>
-              <div
-                className={` ${open ? styles.active : ""} ${
-                  styles.socialLinks
-                }`}
-              >
-                {socialLinks?.map((item, index) => {
-                  const { platform: name, logo, link } = item;
-                  return (
-                    <Link
-                      key={index}
-                      className={`${styles.linkTarget} paragraph`}
-                      href={link}
-                    >
-                      <Image
-                        src={`/assets/${logo}`}
-                        width={22}
-                        height={22}
-                        alt={name}
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </footer>
