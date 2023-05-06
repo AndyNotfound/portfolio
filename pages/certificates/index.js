@@ -5,11 +5,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ImageViewer from "react-simple-image-viewer";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 export default function Certificates({ certificates }) {
   const pageTitle =
-    "Certifcation | Creative Developer & UI Designer | Gohand Silitonga";
+    "Certification | Creative Developer & UI Designer | Gohand Silitonga";
   const pageDesc =
     "Explore Gohand Silitonga's portfolio of certifications showcasing expertise in web development, programming, design, and project management. Browse through a collection of achievements reflecting Gohand's dedication to continuous growth and professional development. Discover the depth of Gohand's skills and commitment to excellence in the field.";
   const pageKey =
@@ -17,6 +17,7 @@ export default function Certificates({ certificates }) {
 
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [viewerImages, setViewerImages] = useState([]);
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -24,9 +25,18 @@ export default function Certificates({ certificates }) {
   }, []);
 
   const closeImageViewer = () => {
+    console.log("isViewerOpen:", true);
     setCurrentImage(0);
     setIsViewerOpen(false);
   };
+
+  useEffect(() => {
+    const viewerImages = certificates.map(
+      (certificate) => certificate.coverImage
+    );
+    setViewerImages(viewerImages);
+  }, [certificates]);
+
   return (
     <>
       <Head>
@@ -65,6 +75,7 @@ export default function Certificates({ certificates }) {
         <section className={styles.certificateContainer}>
           {certificates?.map((item, index) => {
             const { coverImage, title, by } = item;
+            console.log("coverImage:", coverImage);
             return (
               <div key={index} className={styles.certificateItem}>
                 <div className={styles.certificateThumbnailHolder}>
@@ -86,21 +97,19 @@ export default function Certificates({ certificates }) {
               </div>
             );
           })}
-          {console.log([certificates[currentImage].coverImage])}
-          {isViewerOpen && (
-            <ImageViewer
-              src={[certificates[currentImage].coverImage]}
-              currentIndex={currentImage}
-              onClose={closeImageViewer}
-              disableScroll={false}
-              backgroundStyle={{
-                backgroundColor: "rgba(0,0,0,0.9)",
-              }}
-              closeOnClickOutside={true}
-            />
-          )}
-          {console.log("rendered")}
         </section>
+        {isViewerOpen && (
+          <ImageViewer
+            src={viewerImages}
+            currentIndex={currentImage}
+            onClose={closeImageViewer}
+            disableScroll={false}
+            backgroundStyle={{
+              backgroundColor: "rgba(0,0,0,0.9)",
+            }}
+            closeOnClickOutside={true}
+          />
+        )}
       </div>
     </>
   );
