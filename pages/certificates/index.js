@@ -25,7 +25,6 @@ export default function Certificates({ certificates }) {
   }, []);
 
   const closeImageViewer = () => {
-    console.log("isViewerOpen:", true);
     setCurrentImage(0);
     setIsViewerOpen(false);
   };
@@ -75,7 +74,6 @@ export default function Certificates({ certificates }) {
         <section className={styles.certificateContainer}>
           {certificates?.map((item, index) => {
             const { coverImage, title, by } = item;
-            console.log("coverImage:", coverImage);
             return (
               <div key={index} className={styles.certificateItem}>
                 <div className={styles.certificateThumbnailHolder}>

@@ -51,7 +51,7 @@
 .navbarLink {
   text-decoration: none;
   font-family: var(--oxanium);
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--headline);
   transition: all ease-out 0.4s;
@@ -113,4 +113,10 @@
 .burger.activated span:nth-child(2) {
   animation-name: bottom-spin;
   transform: translateY(-5px) rotate(-45deg);
+}
+
+@media screen and (min-width: 1000px) {
+  .navbarLink {
+    font-size: 32px;
+  }
 }
