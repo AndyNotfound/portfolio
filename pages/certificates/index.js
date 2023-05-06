@@ -6,37 +6,70 @@ import path from "path";
 import matter from "gray-matter";
 
 export default function Certificates({ certificates }) {
+  const pageTitle =
+    "Certifcation | Creative Developer & UI Designer | Gohand Silitonga";
+  const pageDesc =
+    "Explore Gohand Silitonga's portfolio of certifications showcasing expertise in web development, programming, design, and project management. Browse through a collection of achievements reflecting Gohand's dedication to continuous growth and professional development. Discover the depth of Gohand's skills and commitment to excellence in the field.";
+  const pageKey =
+    "Gohand Silitonga, Creative Developer, Batam, portfolio, certifications, web development, programming, design, project management, skills, achievements, professional development, growth";
   return (
-    <div className={`wrapper ${styles.certificate}`}>
-      <div>
-        <h1 className={`page-header ${styles.certificateHeadline} animate`}>
-          Certificates
-        </h1>
+    <>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{pageTitle}</title>
+        <meta property="title" content={pageTitle} />
+        <meta property="og:title" content={pageTitle} />
+        <meta name="description" content={pageDesc} />
+        <meta property="og:description" content={pageDesc} />
+        <meta name="keywords" content={pageKey} />
+        <meta
+          property="og:image"
+          content="https://i.postimg.cc/GmHBnkfX/Anime-Whats-App-DP-for-Boys-2.jpg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gohand Silitonga's list of certification to showcase his achievements"
+        />
+        <meta
+          property="og:url"
+          content="https://gohand-silitonga.my.id/certificates"
+        />
+        <meta
+          property="og:site_name"
+          content="Gohand Silitonga's Certification"
+        />
+        <meta property="og:type" content="website" />
+      </Head>
+      <div className={`wrapper ${styles.certificate}`}>
+        <div>
+          <h1 className={`page-header ${styles.certificateHeadline} animate`}>
+            Certificates
+          </h1>
+        </div>
+        <section className={styles.certificateContainer}>
+          {certificates?.map((item, index) => {
+            const { coverImage, title, by } = item;
+            return (
+              <div key={index} className={styles.certificateItem}>
+                <div className={styles.certificateThumbnailHolder}>
+                  <Image
+                    className={styles.certificateThumbnail}
+                    src={coverImage}
+                    fill
+                    alt=""
+                  />
+                </div>
+                <div className={styles.certificateDetail}>
+                  <h2 className={styles.certificateTitle}>{title}</h2>
+                  <p className="paragraph">By {by}</p>
+                </div>
+              </div>
+            );
+          })}
+        </section>
       </div>
-      <section className={styles.certificateContainer}>
-        {certificates?.map((item, index) => {
-          const { coverImage, title, by, date } = item;
-          return (
-            <div key={index} className={styles.certificateItem}>
-              <div className={styles.certificateThumbnailHolder}>
-                <Image
-                  className={styles.certificateThumbnail}
-                  src={coverImage}
-                  fill
-                  alt=""
-                />
-              </div>
-              <div className={styles.certificateDetail}>
-                <h2 className={styles.certificateTitle}>{title}</h2>
-                <p className="paragraph">
-                  By {by} on {date}
-                </p>
-              </div>
-            </div>
-          );
-        })}
-      </section>
-    </div>
+    </>
   );
 }
 
@@ -56,7 +89,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      certificates,
+      certificates: certificates.sort((a, b) => {
+        return b.level - a.level;
+      }),
     },
   };
 }
