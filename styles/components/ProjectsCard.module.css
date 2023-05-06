@@ -71,7 +71,21 @@
   object-fit: cover;
   background-position: center;
 }
-
+@media screen and (min-width: 500px) {
+  .productCardThumbnailHolder {
+    max-height: 350px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .productCardThumbnailHolder {
+    max-height: 450px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .productCardThumbnailHolder {
+    max-height: 550px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .productCard {
     gap: 60px;
@@ -110,6 +124,11 @@
     letter-spacing: 0.01em;
   }
   .productCardThumbnailHolder {
-    max-height: 800px;
+    max-height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .productCardThumbnailHolder {
+    max-height: 700px;
   }
 }
