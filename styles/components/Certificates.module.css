@@ -5,14 +5,18 @@
   margin: 0 0 30px 0;
 }
 .certificateContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 .certificateItem {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+.certificateDetail {
+  display: flex;
+  flex-direction: column;
 }
 .certificateThumbnailHolder {
   width: 100%;
@@ -30,6 +34,18 @@
   color: var(--headline);
   text-transform: uppercase;
 }
+@media screen and (min-width: 700px) {
+  .certificateContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+  .certificateItem {
+    gap: 20px;
+  }
+  .certificateDetail {
+    gap: 10px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .certificate {
     margin: 150px auto 0;
@@ -38,14 +54,19 @@
     margin: 0 0 70px 0;
   }
   .certificateContainer {
+    grid-template-columns: repeat(3, 1fr);
     gap: 60px;
   }
   .certificateThumbnailHolder {
-    max-height: 800px;
+    max-height: 300px;
   }
-  .certificateTitle {
-    font-size: 50px;
-    line-height: 62px;
-    letter-spacing: 0.08em;
+  .certificateAuthor {
+    font-family: var(--poppins);
+    color: var(--paragraph);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
   }
 }

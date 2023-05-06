@@ -4,6 +4,8 @@ import Head from "next/head";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import ImageViewer from "react-simple-image-viewer";
+import { useState, useCallback } from "react";
 
 export default function Certificates({ certificates }) {
   const pageTitle =
@@ -12,6 +14,19 @@ export default function Certificates({ certificates }) {
     "Explore Gohand Silitonga's portfolio of certifications showcasing expertise in web development, programming, design, and project management. Browse through a collection of achievements reflecting Gohand's dedication to continuous growth and professional development. Discover the depth of Gohand's skills and commitment to excellence in the field.";
   const pageKey =
     "Gohand Silitonga, Creative Developer, Batam, portfolio, certifications, web development, programming, design, project management, skills, achievements, professional development, growth";
+
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+  const openImageViewer = useCallback((index) => {
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
   return (
     <>
       <Head>
@@ -56,17 +71,35 @@ export default function Certificates({ certificates }) {
                   <Image
                     className={styles.certificateThumbnail}
                     src={coverImage}
+                    alt={`${title} Certification by ${by}`}
                     fill
-                    alt=""
+                    key={index}
+                    onClick={() => openImageViewer(index)}
                   />
                 </div>
                 <div className={styles.certificateDetail}>
                   <h2 className={styles.certificateTitle}>{title}</h2>
-                  <p className="paragraph">By {by}</p>
+                  <p className={`${styles.certificateAuthor} paragraph`}>
+                    By {by}
+                  </p>
                 </div>
               </div>
             );
           })}
+          {console.log([certificates[currentImage].coverImage])}
+          {isViewerOpen && (
+            <ImageViewer
+              src={[certificates[currentImage].coverImage]}
+              currentIndex={currentImage}
+              onClose={closeImageViewer}
+              disableScroll={false}
+              backgroundStyle={{
+                backgroundColor: "rgba(0,0,0,0.9)",
+              }}
+              closeOnClickOutside={true}
+            />
+          )}
+          {console.log("rendered")}
         </section>
       </div>
     </>

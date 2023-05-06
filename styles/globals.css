@@ -234,3 +234,14 @@ body {
 .carousel .slide {
   text-align: unset !important;
 }
+
+/* Image Viewer */
+.react-simple-image-viewer__modal {
+  top: 70px !important;
+  height: calc(100% - 70px) !important;
+}
+.react-simple-image-viewer__close {
+  top: 20px !important;
+  right: 5.5% !important;
+  opacity: var(--background) !important;
+}
