@@ -1,5 +1,7 @@
 ---
 id: 3
+highlight: false
+level: 1
 coverImage: "/projects/dekoor.webp"
 title: "Dekoor Ltd Landing Page"
 by: "Gohand Silitonga"

@@ -1,5 +1,7 @@
 ---
 id: 1
+highlight: true
+level: 3
 coverImage: "/projects/luxspace.webp"
 title: "LuxSpace Online Marketplace"
 by: "Gohand Silitonga"

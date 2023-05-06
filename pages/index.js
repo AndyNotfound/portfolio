@@ -59,7 +59,20 @@ export async function getStaticProps() {
     };
   });
 
-  const projectsHighLight = projects.slice(0, 4);
+  const projectsHighLight = [...projects];
+
+  projectsHighLight
+    .sort((a, b) => {
+      if (a.frontmatter.highlight && !b.frontmatter.highlight) {
+        return -1; // a comes before b
+      } else if (!a.frontmatter.highlight && b.frontmatter.highlight) {
+        return 1; // b comes before a
+      } else {
+        return b.frontmatter.level - a.frontmatter.level; // sort by level in descending order
+      }
+    })
+    .slice(0, 4);
+
   return {
     props: {
       projects: projectsHighLight,

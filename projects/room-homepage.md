@@ -1,5 +1,7 @@
 ---
 id: 8
+highlight: false
+level: 2
 coverImage: "/projects/room-homepage.webp"
 title: "Room Landing page"
 by: "Gohand Silitonga"

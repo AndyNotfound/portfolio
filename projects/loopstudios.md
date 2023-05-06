@@ -1,5 +1,7 @@
 ---
 id: 2
+highlight: false
+level: 1
 coverImage: "/projects/loop-studios.webp"
 title: "Loopstudios VR Landing Page"
 by: "Gohand Silitonga"

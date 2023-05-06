@@ -1,5 +1,7 @@
 ---
 id: 7
+highlight: true
+level: 3
 coverImage: "/projects/property-agent.webp"
 title: "Astate Property Landing Page"
 by: "Gohand Silitonga"

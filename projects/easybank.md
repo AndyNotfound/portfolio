@@ -1,5 +1,7 @@
 ---
 id: 4
+highlight: false
+level: 2
 coverImage: "/projects/easy-bank.webp"
 title: "EasyBank Landing Page"
 by: "Gohand Silitonga"

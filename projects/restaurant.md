@@ -1,5 +1,7 @@
 ---
 id: 6
+highlight: true
+level: 3
 coverImage: "/projects/rest0rant.webp"
 title: "TastyBites Web Application"
 by: "Gohand Silitonga"

@@ -24,7 +24,7 @@ export default function RecentProjects({ projects }) {
   return (
     <section id="projects" className={`${styles.projects}`}>
       <div className={styles.projectsHeader}>
-        <h2 className="tittle-header">Recent Projects</h2>
+        <h2 className="tittle-header">Selected Projects</h2>
         <Link href="/projects" className="primary-button">
           View All
         </Link>

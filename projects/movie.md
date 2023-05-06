@@ -1,5 +1,7 @@
 ---
 id: 5
+highlight: true
+level: 3
 coverImage: "/projects/movie.webp"
 title: "CineMate Web Application"
 by: "Gohand Silitonga"
