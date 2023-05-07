@@ -1,12 +1,13 @@
 ---
 id: 7
-highlight: true
 level: 3
+highlight: true
 coverImage: "/projects/property-agent.webp"
 title: "Astate Property Landing Page"
-by: "Gohand Silitonga"
 fullTitle: "Find your long dream property with AState"
 excerpt: "Get your dream property through our global agents with AState. We help you to make it a reality. #realestate #dreamhome"
+by: "Gohand Silitonga"
+tag: "React, CSS"
 keyword: "AState, real estate, property search, global agents, dream home"
 live: "https://real-estate-landing-page-react.vercel.app/"
 ---

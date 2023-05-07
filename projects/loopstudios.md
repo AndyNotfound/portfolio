@@ -1,14 +1,15 @@
 ---
 id: 2
-highlight: false
 level: 1
+highlight: false
 coverImage: "/projects/loop-studios.webp"
 title: "Loopstudios VR Landing Page"
-by: "Gohand Silitonga"
 fullTitle: "Loopstudios VR: Immersive Digital Experiences"
 excerpt: "Loopstudios: Your partner for immersive, custom digital experiences that captivate your audience and transform your brand with unforgettable virtual reality."
-live: "https://andynotfound.github.io/LoopstudiosLandingPage/"
+by: "Gohand Silitonga"
+tag: "HTML, CSS, JavaScript"
 keyword: "HTML, CSS, JavaScript, virtual reality, interactive VR, digital experiences, immersive experiences, digital agency"
+live: "https://andynotfound.github.io/LoopstudiosLandingPage/"
 ---
 <style>
   ul {

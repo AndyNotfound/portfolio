@@ -166,7 +166,7 @@
 .carouselButtonLeft,
 .carouselButtonRight {
   position: absolute;
-  top: 40%;
+  top: 30%;
   z-index: 3;
 }
 .carouselButtonLeft {
@@ -181,7 +181,18 @@
 .buttonShow {
   display: block;
 }
-
+@media screen and (min-width: 400px) {
+  .carouselButtonLeft,
+  .carouselButtonRight {
+    top: 30%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .carouselButtonLeft,
+  .carouselButtonRight {
+    top: 35%;
+  }
+}
 @media screen and (min-width: 1000px) {
   .carouselContainer {
     margin: 0 15%;

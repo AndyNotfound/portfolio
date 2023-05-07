@@ -1,12 +1,13 @@
 ---
 id: 8
-highlight: false
 level: 2
+highlight: false
 coverImage: "/projects/room-homepage.webp"
 title: "Room Landing page"
-by: "Gohand Silitonga"
 fullTitle: "Discover your perfect furnishing with Room"
 excerpt: "Discover innovative ways to decorate with Room. Our custom-made furniture collection blends design and function to suit your individual taste. #interiordesign #furniture"
+by: "Gohand Silitonga"
+tag: "React, CSS"
 keyword: "Room, furniture, decoration, multifunctional collection, traditional, contemporary styles, custom-made furniture, product specialists"
 live: "https://room-homepage-olive-psi.vercel.app/"
 ---

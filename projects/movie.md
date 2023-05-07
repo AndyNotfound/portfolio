@@ -1,12 +1,13 @@
 ---
 id: 5
-highlight: true
 level: 3
+highlight: true
 coverImage: "/projects/movie.webp"
 title: "CineMate Web Application"
-by: "Gohand Silitonga"
 fullTitle: "CineMate: App to keep track of airing and favorite movies"
 excerpt: "Stay updated with the latest movies in cinema and save your favorite picks. Built with HTML, CSS, and JavaScript using Webpack, Babel, and MVP architecture."
+by: "Gohand Silitonga"
+tag: "Webpack, HTML, CSS, JavaScript"
 keyword: "CineMate, movies, cinema, web app, favorites, trailers, notifications, IndexedDB, caching, search, responsive design"
 live: ""
 ---

@@ -1,12 +1,13 @@
 ---
 id: 6
-highlight: true
 level: 3
+highlight: true
 coverImage: "/projects/rest0rant.webp"
 title: "TastyBites Web Application"
-by: "Gohand Silitonga"
 fullTitle: "TastyBites: App to enlist nearby restaurant"
 excerpt: "TastyBites - Your ultimate guide to discovering and keeping track of your favorite restaurants. Explore and indulge in the world of restaurants."
+by: "Gohand Silitonga"
+tag: "Webpack, HTML, CSS, JavaScript"
 keyword: "TastyBites, restaurants, web app, favorites, IndexedDB, caching, search, responsive design"
 live: ""
 ---

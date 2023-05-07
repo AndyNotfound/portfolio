@@ -1,14 +1,15 @@
 ---
 id: 1
-highlight: true
 level: 3
+highlight: true
 coverImage: "/projects/luxspace.webp"
 title: "LuxSpace Online Marketplace"
-by: "Gohand Silitonga"
 fullTitle: "LUXSPACE: ONLINE DECORATION & FURNITURE MARKETPLACE"
 excerpt: "LuxSpace is the premier e-commerce destination for furniture and decor, providing an easy-to-navigate platform with exceptional service."
-live: "https://luxspace-andy.vercel.app/"
+by: "Gohand Silitonga"
+tag: "React JS, Tailwind CSS"
 keyword: "LuxSpace, furniture, decoration, e-commerce, shopping, home decor"
+live: "https://luxspace-andy.vercel.app/"
 ---
 
 <style>

@@ -3,11 +3,12 @@ import Image from "next/image";
 import styles from "@/styles/components/ProjectsCard.module.css";
 
 export default function ProjectsCard({ data }) {
-
   const {
     slug,
-    frontmatter: { coverImage, title, excerpt, live },
+    frontmatter: { coverImage, title, excerpt, live, tag },
   } = data;
+
+  const tagList = tag.split(",");
   return (
     <div className={styles.productCard}>
       <div className={styles.productCardThumbnailHolder}>
@@ -19,7 +20,18 @@ export default function ProjectsCard({ data }) {
         />
       </div>
       <div className={styles.productCardDetail}>
-        <h2>{title}</h2>
+        <div className={styles.productCardDetailTitle}>
+          <h2>{title}</h2>
+          <div className={styles.tagList}>
+            {tagList?.map((item, index) => {
+              return (
+                <p key={index} className={`${styles.tag} paragraph`}>
+                  {item}
+                </p>
+              );
+            })}
+          </div>
+        </div>
         <div className={styles.productCardDesc}>
           <p className="paragraph">{excerpt}</p>
           <div className={styles.productCardButtonGroup}>

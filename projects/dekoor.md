@@ -1,14 +1,15 @@
 ---
 id: 3
-highlight: false
 level: 1
+highlight: false
 coverImage: "/projects/dekoor.webp"
 title: "Dekoor Ltd Landing Page"
-by: "Gohand Silitonga"
 fullTitle: "The Best Minimalist Furniture for Your Home - Dekoor Ltd"
 excerpt: "Experience Elevated Living with Dekoor's Modern Furniture. Our site is built with HTML, CSS, and JS. Features: user-centric design, best-seller carousel, and more!"
-live: "https://dekoor-andynotfound.vercel.app/"
+by: "Gohand Silitonga"
+tag: "HTML, CSS, JavaScript"
 keyword: "Gohand Silitonga, HTML, CSS, JavaScript, Technical Test"
+live: "https://dekoor-andynotfound.vercel.app/"
 ---
 
 <style>

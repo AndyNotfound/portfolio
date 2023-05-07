@@ -1,5 +1,6 @@
 .productCard,
 .productCardDetail,
+.productCardDetailTitle,
 .productCardButtonGroup,
 .productCardButton {
   display: flex;
@@ -10,12 +11,26 @@
   gap: 20px;
   position: relative;
 }
+.productCardThumbnailHolder {
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 250px;
+  position: relative;
+}
+.productCardThumbnailHolder > img {
+  object-fit: cover;
+  background-position: center;
+}
 .productCardDetail {
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 }
-.productCardDetail > h2 {
+.productCardDetailTitle {
   width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+.productCardDetailTitle > h2 {
   font-family: var(--oxanium);
   font-style: normal;
   font-weight: 500;
@@ -24,6 +39,16 @@
   letter-spacing: 0.08em;
   color: var(--headline);
   text-transform: uppercase;
+}
+.tagList {
+  display: flex;
+  gap: 5px;
+}
+.tag {
+  padding: 2px 15px;
+  border-radius: 30px;
+  color: var(--paragraph);
+  background-color: #f8f8fa;
 }
 .productCardDesc {
   width: 100%;
@@ -61,21 +86,6 @@
   line-height: 18px;
   letter-spacing: 0.01em;
 }
-.productCardThumbnailHolder {
-  width: 100%;
-  aspect-ratio: 1;
-  max-height: 250px;
-  position: relative;
-}
-.productCardThumbnailHolder > img {
-  object-fit: cover;
-  background-position: center;
-}
-@media screen and (min-width: 500px) {
-  .productCardThumbnailHolder {
-    max-height: 350px;
-  }
-}
 @media screen and (min-width: 500px) {
   .productCardThumbnailHolder {
     max-height: 450px;
@@ -90,13 +100,23 @@
   .productCard {
     gap: 60px;
   }
+  .productCardThumbnailHolder {
+    max-height: 600px;
+  }
   .productCardDetail {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 60px;
   }
-  .productCardDetail > h2 {
+  .productCardDetailTitle {
     width: 40%;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 16px;
+  }
+  .productCardDetailTitle > h2 {
     font-size: 50px;
     line-height: 62px;
     letter-spacing: 0.08em;
@@ -122,9 +142,6 @@
   .buttonText {
     line-height: 30px;
     letter-spacing: 0.01em;
-  }
-  .productCardThumbnailHolder {
-    max-height: 600px;
   }
 }
 @media screen and (min-width: 1200px) {

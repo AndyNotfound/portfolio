@@ -1,14 +1,15 @@
 ---
 id: 4
-highlight: false
 level: 2
+highlight: false
 coverImage: "/projects/easy-bank.webp"
 title: "EasyBank Landing Page"
-by: "Gohand Silitonga"
 fullTitle: "Easybank: Your All-in-One Online Banking Solution"
 excerpt: "Transform your finances with Easybank's next-gen digital banking. One account for spending, saving, budgeting, and investing. Open in minutes."
-live: "https://andynotfound.github.io/EasyBankLandingPage/"
+by: "Gohand Silitonga"
+tag: "HTML, SCSS, JavaScript"
 keyword: "next generation banking, online banking, open banking, financial hub, budgeting, investments, fast onboarding, digital banking, Easybank"
+live: "https://andynotfound.github.io/EasyBankLandingPage/"
 ---
 
 <style>
