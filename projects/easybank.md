@@ -9,7 +9,7 @@ excerpt: "Transform your finances with Easybank's next-gen digital banking. One 
 by: "Gohand Silitonga"
 tag: "HTML, SCSS, JavaScript"
 keyword: "next generation banking, online banking, open banking, financial hub, budgeting, investments, fast onboarding, digital banking, Easybank"
-live: "https://andynotfound.github.io/EasyBankLandingPage/"
+live: "https://andynotfound.github.io/EasyBank/"
 ---
 
 <style>

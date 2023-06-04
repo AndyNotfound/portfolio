@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/components/Footer.module.css";
 import { downloadCv } from "@/helpers";
-import { useState } from "react";
 
 export default function Footer() {
   const socialLinks = [

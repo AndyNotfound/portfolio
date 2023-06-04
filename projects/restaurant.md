@@ -115,6 +115,6 @@ live: ""
 <h2 style="font-weight: 400;">Unleash your curiosity: Explore our code on Github</h2>
 <br>
 <p>
-    Sorry, we don't have a live preview available at the moment. But don't worry, our code is open-sourced on GitHub, so you can explore our project and play with the code yourself! Click the <a class="link" href="https://github.com/AndyNotfound/IDCampSixthExam">link</a> to see the magic behind the scenes.
+    Sorry, we don't have a live preview available at the moment. But don't worry, our code is open-sourced on GitHub, so you can explore our project and play with the code yourself! Click the <a class="link" href="https://github.com/AndyNotfound/IDCamp2022/tree/main/IDCampSixthExam">link</a> to see the magic behind the scenes.
 </p>
 <br>

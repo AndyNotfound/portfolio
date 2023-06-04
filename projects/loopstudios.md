@@ -9,7 +9,7 @@ excerpt: "Loopstudios: Your partner for immersive, custom digital experiences th
 by: "Gohand Silitonga"
 tag: "HTML, CSS, JavaScript"
 keyword: "HTML, CSS, JavaScript, virtual reality, interactive VR, digital experiences, immersive experiences, digital agency"
-live: "https://andynotfound.github.io/LoopstudiosLandingPage/"
+live: "https://andynotfound.github.io/Loopstudios/"
 ---
 <style>
   ul {
