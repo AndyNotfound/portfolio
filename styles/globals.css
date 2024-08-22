@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600&family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap");
 :root {
-  --background: #fffffe;
-  --button: #00ebc7;
-  --headline: #00214d;
-  --button-text: #00214d;
-  --paragraph: #1b2d45;
+  --background: #FFFFFE;
+  --button: #83C5BE;
+  --headline: #006D77;
+  --button-text: #001524;
+  --paragraph: #001524;
   --oxanium: "Oxanium", cursive;
   --playfair: "Playfair Display", serif;
   --poppins: "Poppins", sans-serif;
@@ -157,9 +157,9 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
-  * {
+  /* * {
     cursor: none;
-  }
+  } */
   main {
     margin: 80px 0;
   }

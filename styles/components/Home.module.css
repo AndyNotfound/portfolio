@@ -25,33 +25,38 @@
 }
 @media screen and (min-width: 1000px) {
   .hero {
-    margin: 200px auto 0;
+    background: rgb(242,237,234);
+    background: linear-gradient(90deg, rgba(242,237,234,1) 61%, rgba(217,217,217,1) 100%);
+    background-size: cover;
+    width: 100%;
+    margin: -80px auto 0;
+    padding-left: 96px;
   }
   .heroContent {
     bottom: 0;
   }
   .heroImage {
-    width: 566px;
-    height: 566px;
-    aspect-ratio: 1;
+    width: 966px;
+    height: 1000px;
     position: absolute;
-    top: 0;
     right: 0;
+    bottom: 0;
   }
   .heroContent {
-    height: 566px;
+    height: 100vh;
     position: relative;
     z-index: 1;
   }
   .heroSecondHeadline {
     display: unset;
-    color: var(--headline);
+    color: var(--button-text);
     font-family: var(--oxanium);
     font-weight: 500;
     font-size: 24px;
     letter-spacing: 1px;
   }
   .heroHeadline {
+    width: 951px;
     margin: 30px 0 70px 0;
   }
 }

@@ -3,7 +3,7 @@
   z-index: 99;
   top: 0;
   width: 100%;
-  background-color: var(--background);
+  background-color: transparent;
   margin: 0 auto;
   padding: 1em 5%;
   display: flex;

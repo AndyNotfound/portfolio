@@ -4,12 +4,12 @@ import { sendEmail } from "@/helpers";
 
 export default function Hero() {
   return (
-    <section id="hero" className={`wrapper ${styles.hero}`}>
+    <section id="hero" className={`${styles.hero}`}>
       <div className={styles.heroContent}>
         <p className={styles.heroSecondHeadline}>Gohand Silitonga</p>
         <div>
           <h1 className={`page-header animate ${styles.heroHeadline}`}>
-            A creative developer from indonesia
+            A Full-Stack developer from indonesia
           </h1>
         </div>
         <button
@@ -21,9 +21,9 @@ export default function Hero() {
       </div>
       <Image
         className={styles.heroImage}
-        src="/assets/hero.webp"
-        width={566}
-        height={566}
+        src="/assets/banner.svg"
+        width={966}
+        height={1000}
         alt=""
         priority
       />
